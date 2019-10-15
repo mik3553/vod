@@ -1,7 +1,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-input[type=text], [type=email], [type=password] {
+input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -13,7 +13,7 @@ input[type=text], [type=email], [type=password] {
 }
 
 input[type=submit] {
-  background-color: grey;
+  background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -22,16 +22,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: rgb(192, 192, 192);
-  
+  background-color: #45a049;
 }
 
-.formInscri {
+.container {
   border-radius: 5px;
-  background-color: #000000;
+  background-color: #f2f2f2;
   padding: 20px;
-  width: 30rem;
-}
-h3 {
-  color: white;
 }
