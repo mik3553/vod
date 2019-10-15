@@ -1,0 +1,14 @@
+.logo {
+	width: 10rem;
+}
+
+.flexHeaderFooter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mainNav {
+	display: flex;
+	justify-content: space-around;
+}
