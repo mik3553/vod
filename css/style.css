@@ -11,4 +11,87 @@
 .mainNav {
 	display: flex;
 	justify-content: space-around;
+	background-image:"coupe-ratée.jpg";
 }
+
+ .tableauAbonnement 
+ {
+	width: 100%;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 5px;
+    border-color: black;
+    margin-top:1px;
+}
+
+.tableauAbonnement article {
+	border: 1px solid black;
+	padding: 1rem;
+}
+#offre {
+	width: 100%;
+
+border:1px;
+border-color: black;
+margin:2px;
+}
+
+#infoGratuitePerso {
+	border: 5px;
+	border-color: black;
+	width: 100%;
+	margin: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+#ofr {
+	text-align: center;
+	border: 1px solid black;
+
+
+
+}
+ #offre {
+ 	text-align: center;
+ }
+ div h2 {
+ 	border: 1px;
+ 	border-color: black;
+ }
+ .vintageOne {
+ 	border: 1px;
+ 	border-color: black;
+ 	margin-right: 1px;
+
+ }
+
+ .vintagehouzz {
+ 	border: 1px;
+ 	border-color: black;
+
+ }
+ .vintageNLive {
+ 	border: 1px;
+ 	border-color: black;
+ 	margin-left: 1px;
+
+ }
+
+ @media screen and (max-width: 640px;) {
+
+
+ 	body {
+ 		margin: 1px;
+ 		border-color:red;
+
+ 	}
+ }
+ @media screen and (max-width: 1020px;){
+
+ 	.flexHeaderFooter {
+ 		border-color: green;
+ 	}
+ }
