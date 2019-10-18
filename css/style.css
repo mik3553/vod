@@ -1,3 +1,5 @@
+
+
 .logo {
 	width: 10rem;
 }
@@ -11,87 +13,72 @@
 .mainNav {
 	display: flex;
 	justify-content: space-around;
-	background-image:"coupe-ratée.jpg";
+	
 }
 
  .tableauAbonnement 
  {
-	width: 100%;
 	display: flex;
-    flex-direction: row;
-    justify-content: center;
+	flex-wrap: wrap;
     border: 5px;
     border-color: black;
     margin-top:1px;
+    background-color: grey;
 }
 
 .tableauAbonnement article {
 	border: 1px solid black;
 	padding: 1rem;
-}
-#offre {
-	width: 100%;
-
-border:1px;
-border-color: black;
-margin:2px;
+	background-color: black;
+	margin: 2rem auto;
+	width: 90%;
 }
 
+.tableauAbonnement article h2 {
+	color: white;
+}
 #infoGratuitePerso {
 	border: 5px;
 	border-color: black;
-	width: 100%;
 	margin: 5px;
 	padding-bottom: 5px;
-	display: flex;
-	justify-content: center;
-	text-align: center;
 }
 #ofr {
+	width: 100%;
 	text-align: center;
 	border: 1px solid black;
-
-
+	background-color: rgb(77, 77, 77);
+	margin: 0 auto;
+	padding: 2rem;
 
 }
- #offre {
- 	text-align: center;
+#ofr h2 { 
+color: whitesmoke;
  }
- div h2 {
- 	border: 1px;
- 	border-color: black;
- }
- .vintageOne {
- 	border: 1px;
- 	border-color: black;
- 	margin-right: 1px;
 
+
+ .vintageOne {
+ 	/*width: 30%;*/
+ 	border: 5px;
+ 	border-color: black;
+ 	
+ }
+ .vintageOne h2, p {
+ color: white;
  }
 
  .vintagehouzz {
- 	border: 1px;
+ 	/*width: 30%;*/
+ 	border: 5px;
  	border-color: black;
+ 
 
  }
  .vintageNLive {
- 	border: 1px;
+ /*	width: 30%;*/
+ 	border: 5px;
  	border-color: black;
- 	margin-left: 1px;
-
+ 	color: yellow;
+ 	background-color: grey;
  }
 
- @media screen and (max-width: 640px;) {
-
-
- 	body {
- 		margin: 1px;
- 		border-color:red;
-
- 	}
- }
- @media screen and (max-width: 1020px;){
-
- 	.flexHeaderFooter {
- 		border-color: green;
- 	}
- }
