@@ -1,14 +1,69 @@
-.logo {
-	width: 10rem;
+body {
+	
+	font-family: 'Old Standard TT', serif;
 }
 
-.flexHeaderFooter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	color:grey;
+}
+li {
+	list-style: none;
+	color: white;
+}
+
+header {
+	padding: 3rem;
+	background-color: black;
+}
+.logo {
+	display: block;
+	margin: 1rem auto;
+	width: 8rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+	color: #B6C6D4;
+	text-shadow: 3px 3px 3px grey;
+	text-align: center;
+}
+
+strong {
+	display: block;
+	text-align: center;
+}
+
+header div {
+	text-align: center;
 }
 
 .mainNav {
+	background-color: grey;
+}
+.flexLi {
 	display: flex;
 	justify-content: space-around;
+	background-color: #CCD1CD;
+	padding: 1rem 0;
 }
+
+
+footer {
+	background-color: black;
+	padding: 3rem;
+}
+
+footer div {
+	text-align: center;
+}
+
+header a, footer a, strong {
+	color: white;
+}
+
+
