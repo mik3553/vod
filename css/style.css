@@ -39,6 +39,10 @@ body {
 	font-family: 'Old Standard TT', serif;
 }
 
+main {
+	margin: 1rem 2rem;
+}
+
 a {
 	text-decoration: none;
 	color: black;
@@ -87,6 +91,34 @@ header div {
 	background-color: #CCD1CD;
 	padding: 1rem 0;
 }
+
+.sectionGenre {
+	background-color: black;
+}
+.sectionGenre h2 {
+	text-align: center;
+	padding: 1rem;
+}
+.sectionGenre div {
+	background-color: whitesmoke;
+}
+.sectionGenre article{
+	background-color: grey;
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 1.5rem;
+}
+.sectionGenre article h2 {
+	background-color: whitesmoke;
+}
+
+.sectionGenre video {
+	display: block;
+	width: 90%;
+	border : 5px solid black;
+	margin: 0 auto;
+}
+
 
 
 footer {
