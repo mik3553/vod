@@ -1,16 +1,93 @@
 
 
-.logo {
-	width: 10rem;
+input[type=text], [type=email], [type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-.flexHeaderFooter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+input[type=submit] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(192, 192, 192);
+  
+}
+
+.formInscri {
+  border-radius: 5px;
+  background-color: #000000;
+  padding: 20px;
+  width: 30rem;
+}
+h3 {
+  color: white;
+}
+
+body {
+	
+	font-family: 'Old Standard TT', serif;
+}
+
+main {
+	margin: 1rem 2rem;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	color:grey;
+}
+li {
+	list-style: none;
+	color: white;
+}
+
+header {
+	padding: 3rem;
+	background-color: black;
+}
+
+.logo {
+	display: block;
+	margin: 1rem auto;
+	width: 8rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+	color: #B6C6D4;
+	text-shadow: 3px 3px 3px grey;
+	text-align: center;
+}
+
+strong {
+	display: block;
+	text-align: center;
+}
+
+header div {
+	text-align: center;
 }
 
 .mainNav {
+	background-color: grey;
+}
+.flexLi {
 	display: flex;
 	justify-content: space-around;
 	
@@ -50,11 +127,11 @@
 	background-color: rgb(77, 77, 77);
 	margin: 0 auto;
 	padding: 2rem;
-
 }
+
 #ofr h2 { 
 color: whitesmoke;
- }
+}
 
 
  .vintageOne {
@@ -82,3 +159,48 @@ color: whitesmoke;
  	background-color: grey;
  }
 
+	background-color: #CCD1CD;
+	padding: 1rem 0;
+}
+
+.sectionGenre {
+	background-color: black;
+}
+.sectionGenre h2 {
+	text-align: center;
+	padding: 1rem;
+}
+.sectionGenre div {
+	background-color: whitesmoke;
+}
+.sectionGenre article{
+	background-color: grey;
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 1.5rem;
+}
+.sectionGenre article h2 {
+	background-color: whitesmoke;
+}
+
+.sectionGenre video {
+	display: block;
+	width: 90%;
+	border : 5px solid black;
+	margin: 0 auto;
+}
+
+
+
+footer {
+	background-color: black;
+	padding: 3rem;
+}
+
+footer div {
+	text-align: center;
+}
+
+header a, footer a, strong {
+	color: white;
+}

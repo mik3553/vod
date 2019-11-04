@@ -3,23 +3,26 @@
     <head>
         <meta charset="utf-8">
         <title>Vintage Movis</title>
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="flexHeaderFooter">
+        <header>
             <img class="logo" src="images/logo.png" alt="logo">
             <h1>Vint'age Mov'is</h1>
             <strong>Toutes vos videos Vintage en un seul site</strong>
-            <nav >
-                <ul>
-                    <li><a href="">inscription</a></li>
-                    <li><a href="">connexion</a></li>
-                    <li><a href="">mon compte</a></li>
-                </ul>
-            </nav>
+            <div>
+                <nav >
+                    <ul>
+                        <li><a href="">inscription</a></li>
+                        <li><a href="">connexion</a></li>
+                        <li><a href="">mon compte</a></li>
+                    </ul>
+                </nav>   
+            </div>
         </header>
-        <nav>
-            <ul class="mainNav">
+        <nav class="mainNAv">
+            <ul class="flexLi">
                 <li><a href="">Accueil</a></li>
                 <li><a href="">Par genre</a></li>
                 <li><a href="">tout voir</a></li>
@@ -68,28 +71,81 @@
     </article>
 </section>
 <!-- fin section abonnement -->
-            
+           
 
+           <div class="formInscri">
+                <h3>inscription</h3>
+                <form action="/action_page.php">
+                
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                <input type="email" id="email" placeholder="your email..">
+            
+                <input type="text" id="adresse" placeholder="Your adresse..">
+                <input type="password" id="password" placeholder="tape your passworde..">
+                <input type="password" id="passwordC" placeholder="confirm your passworde..">
+            
+                <input type="submit" value="submit">
+              </form>
+            </div>
+            <div class="formInscri">
+                <h3>connexion</h3>
+                <form action="/action_page.php">
+                
+                <input type="email" id="fname" name="email" placeholder="your email..">
+            
+                <input type="text" id="lname" name="password" placeholder="your password..">
+                
+                
+            
+                <input type="submit" value="submit">
+              </form>
+            </div>
+
+
+        <section class="sectionGenre">
+            <div>
+                <h2>Nos genres</h2>
+            </div>
+            <article>
+                <h2>Films</h2>
+                <video src=""></video>
+            </article>
+            <article>
+                <h2>Series</h2>
+                <video src=""></video>
+            </article>
+            <article>
+                <h2>Documentaires</h2>
+                <video src=""></video>
+            </article>
+            <article>
+                <h2>Dessins animés</h2>
+                <video src=""></video>
+            </article>
+        </section>
         </main>
 
-        <footer class="flexHeaderFooter">
+        <footer>
             <img class="logo" src="images/logo.png" alt="logo">
             <div>
-            <ul>
-                <li><a href="">Condition et Usage</a></li>
-                <li><a href="">Conditions générales d'utilisation</a></li>
-                <li><a href="">Conditions générales de vente</a></li>
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+                <ul>
+                    <li><h4>Condition et Usage</h4></li>
+                    <li><a href="">Conditions générales d'utilisation</a></li>
+                    <li><a href="">Conditions générales de vente</a></li>
+                    <li><a href="">Mentions légales</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </div>
             <div>
-            <ul>
-                <li>Suivez nous sur :</li>
-                <li><a href="#">Google+</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
+                <ul>
+                    <li><h4>Suivez nous sur :</h4></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
             </div>
         </footer>
         
