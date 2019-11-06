@@ -1,18 +1,26 @@
  $(document).ready(function(event) {
 
  	// pour faire apparaitre les formulaire inscription / connexion
- 	$("#inscription").click(function(){
+ 	$("#inscription").click(function(e){
+ 		e.preventDefault;
  		$("#formInscri").slideDown();
+ 		$("h1").addClass("light");
  	})
  	$("#connexion").click(function(){
- 		$("#formConnexion").slideDown();
+ 		$("#formConnect").slideDown();
+ 		$("h1").addClass("light");
  	})
  	$(".close").click(function(){
  		$("#formInscri").slideUp();
- 		$("#formConnexion").slideUp();
+ 		$("#formConnect").slideUp();
  	})
 
-
+ 	$("body").click(function(e){
+ 		if ($(e.target) == $("#formInscri") ) {
+    		$("#formInscri").hide();
+    		console.log("lol")
+  		}
+ 	})
 
  	// event pour recuperer nos valeur des inputs avec une class user
  	$("#inscriptionForm input[type=submit]").click(function(e){
