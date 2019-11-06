@@ -25,14 +25,52 @@ input[type=submit]:hover {
   
 }
 
-.formInscri {
-  border-radius: 5px;
-  background-color: #000000;
-  padding: 20px;
-  width: 30rem;
+#formInscri {
+	display: none;
+	z-index: 1;
+	border: solid white 1px;
+	border-radius: 1rem;
+	background-color: #000000;
+	padding: 1rem;
+	width: 20rem;
+	margin-left: -11rem;
+	position: absolute;
+	top: 15rem;
+	left: 50%;
 }
+
+#formConnect {
+	display: none;
+	border: solid white 1px;
+	z-index: 1;
+	border-radius: 1rem;
+	background-color: #000000;
+	padding: 1rem;
+	width: 20rem;
+	margin-left: -11rem;
+	position: absolute;
+	top: 15rem;
+	left: 50%;
+}
+
+.passWarning {
+	display: none;
+}
+
+.close {
+	float: right;
+	color: white;
+	background-color: gold;
+}
+.close:hover {
+	color: white;
+	background-color: red;
+}
+
 h3 {
   color: white;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 body {
@@ -46,26 +84,37 @@ main {
 
 a {
 	text-decoration: none;
-	color: black;
+	color: whitesmoke;
 }
+a:hover {
+	color: gold;
+}
+
 p {
-	color:grey;
+	color:whitesmoke;
 }
 li {
 	list-style: none;
 	color: white;
+	padding: 0;
+}
+ul{
+	padding : 0;
+	margin: 0;
 }
 
 header {
-	padding: 3rem;
+	padding: 1rem;
 	background-color: black;
+
 }
 
 .logo {
 	display: block;
-	margin: 1rem auto;
+	margin: 0 auto;
 	width: 8rem;
 	text-align: center;
+
 }
 
 h1 {
@@ -73,6 +122,11 @@ h1 {
 	color: #B6C6D4;
 	text-shadow: 3px 3px 3px grey;
 	text-align: center;
+}
+
+.light {
+	-webkit-animation: text-flicker-in-glow 4s linear both;
+	        animation: text-flicker-in-glow 4s linear both;
 }
 
 strong {
@@ -84,13 +138,29 @@ header div {
 	text-align: center;
 }
 
-.mainNav {
-	background-color: grey;
+
+.mainNAv {
+	background-color: rgb(77, 77, 77);
+	padding: 1rem auto;
+	border-radius: 1rem;
 }
+
+.flexLiFirst{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top : 0.5rem;
+}
+.flexFirst li {
+	margin:0 1rem;
+}
+
 .flexLi {
 	display: flex;
 	justify-content: space-around;
-	
+	background-color: rgb(77, 77, 77);
+	padding: 1rem 1rem;
+	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
 }
 
  .tableauAbonnement 
@@ -107,80 +177,42 @@ header div {
 	border: 1px solid black;
 	padding: 1rem;
 	background-color: black;
-	margin: 2rem auto;
+	margin: 0 auto 1rem auto;
 	width: 90%;
+	border: 1px solid white;
+	border-radius: 1rem;
 }
 
-.tableauAbonnement article h2 {
-	color: white;
-}
-#infoGratuitePerso {
-	border: 5px;
-	border-color: black;
-	margin: 5px;
-	padding-bottom: 5px;
-}
-#ofr {
-	width: 100%;
+
+
+h2 { 
+	color: whitesmoke;
 	text-align: center;
+}
+
+
+section {
+	margin: 1rem auto;
+	padding: 1rem 1rem;
 	border: 1px solid black;
-	background-color: rgb(77, 77, 77);
-	margin: 0 auto;
-	padding: 2rem;
-}
-
-#ofr h2 { 
-color: whitesmoke;
-}
-
-
- .vintageOne {
- 	/*width: 30%;*/
- 	border: 5px;
- 	border-color: black;
- 	
- }
- .vintageOne h2, p {
- color: white;
- }
-
- .vintagehouzz {
- 	/*width: 30%;*/
- 	border: 5px;
- 	border-color: black;
- 
-
- }
- .vintageNLive {
- /*	width: 30%;*/
- 	border: 5px;
- 	border-color: black;
- 	color: yellow;
- 	background-color: grey;
- }
-
-	background-color: #CCD1CD;
-	padding: 1rem 0;
+	border-radius: 1rem;
 }
 
 .sectionGenre {
 	background-color: black;
 }
-.sectionGenre h2 {
-	text-align: center;
-	padding: 1rem;
-}
+
 .sectionGenre div {
-	background-color: whitesmoke;
+	background-color: rgb(77, 77, 77);
+	padding: 1rem;
 }
 .sectionGenre article{
 	background-color: grey;
 	width: 90%;
-	margin: 0 auto;
+	margin: 0 auto 1rem auto;
 	padding-bottom: 1.5rem;
-}
-.sectionGenre article h2 {
-	background-color: whitesmoke;
+	border: 1px solid white;
+	border-radius: 1rem;
 }
 
 .sectionGenre video {
@@ -188,13 +220,19 @@ color: whitesmoke;
 	width: 90%;
 	border : 5px solid black;
 	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 1rem;
+}
+
+.sectionGenre h3 {
+	color: black;
 }
 
 
 
 footer {
 	background-color: black;
-	padding: 3rem;
+	padding: 1rem;
 }
 
 footer div {
@@ -202,5 +240,406 @@ footer div {
 }
 
 header a, footer a, strong {
-	color: white;
+	color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
 }
