@@ -2,37 +2,33 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
         <title>Vintage Movis</title>
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-        </script>
+        <!-- bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <span id="remonter"></span>
     <body>
         <header>
-            <i class="fas fa-bars"></i>
+            <div id="welcome"></div>
             <img class="logo" src="images/logo.png" alt="logo">
             <h1>Vint'age Mov'is</h1>
             <strong>Toutes vos videos Vintage en un seul site</strong>
-            <div>
-                <nav>
-                    <ul class="flexLiFirst">
-                        <li id="inscription"><a href="#">inscription</a></li>
-                        <li id="connexion"> <a href="#">connection</a> </li>
-                    </ul>
-                </nav> 
-            </div>
+                <ul class="flexLiFirst">
+                    <li id="inscription"><a href="#">inscription</a></li>
+                    <li id="connexion"> <a href="#">connexion</a> </li>
+                </ul> 
         </header>
+
         <nav class="mainNAv">
             <ul class="flexLi">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a class="monCompte" href="" title="Inscris pour le découvrire">?</a></li>
+                <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
                 <li><a href="displayAll.html">Gallerie</a></li>
             </ul>
         </nav>
@@ -40,38 +36,47 @@
         <div id="formInscri">
             <span class="close">&times</span>
                 <h3>inscription</h3>
-                <form action="#" id="inscriptionForm">
+                <form action="#" id="inscriptionForm" method="post">
                 
                 <input type="text" id="username" placeholder="Your name..">
+                <div class="warningUser" role="alert">Veuillez enregister un pseudo valide
+                </div>
                 
                 <input type="email" id="mail" placeholder="your email..">
+                <div class="warningEmail" role="alert">Veuillez enregister un email valide
+                </div>
+                <div class="warningCheckEmail" role="alert">Email déja utilisé !
+                </div>
             
-                <input type="text" id="adresse" placeholder="Your adresse..">
                 <input type="password" id="password" placeholder="tape your passworde..">
-                <div class="passWarning" role="alert">A simple warning alert—check it out!
+                <!-- <span class="close" title="8 caractére avec au moins une majucule, un chiffre, un caractére special">?</span> -->
+                <div class="warning" role="alert">Veuillez enregister un mot de pass valide
                 </div>
                 <input type="password" id="passwordC" placeholder="confirm your passworde..">
+                <div class="warningCheckPass" role="alert">Veuillez confirmer votre mot de passe
+                </div>
             
-                <input type="submit" value="submit" id="inscription">
-              </form>
-        </div>
-            <div id="formConnect">
-                <span class="close">&times</span>
-                <h3>connexion</h3>
-                <form action="#" id="connexionForm">
-                
-                <input type="email" id="coEmail" placeholder="your email..">
-            
-                <input type="text" placeholder="your password..">
-                
                 <input type="submit" value="submit">
-              </form>
-            </div>
+            </form>
+        </div>
+        <div id="formConnect">
+            <span class="close">&times</span>
+            <h3>connexion</h3>
+            <div class="warningCheckUserAuth" role="alert">Identifiants incorrectes</div>
+            <form action="" id="connexionForm">
+                
+            <input type="email" id="coEmail" placeholder="your email..">
+            
+            <input type="password" id="coPassword"placeholder="your password..">
+                
+            <input type="submit" value="submit">
+            </form>
+        </div>
         
     <main>
         <section class="tableauAbonnement">
             
-                <h2>Nos Abonnements</h2>
+            <h2>Nos abonnements</h2>
 
             <article class="vintageOne">
                 <h3>Vint'age One<b>"only"</b></h3>
@@ -95,6 +100,7 @@
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <span>Prix = <b>100</b> Chouquettes.</span>
             </article>
+            <a href="#remonter" id="pied"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
             <article class="vintageNlive">
                 <h3>Vint'age N'Live</h3>
                 <p>Vint'age dans votre poche.
@@ -107,31 +113,17 @@
                 <span>Prix = <b>100</b> Francs/mois</span>
             </article>
         </section>
-        <!-- fin section abonnement -->
+
+       
                 
         <section class="sectionGenre">
             
                 <h2>Nos categories</h2>
             
-                <article>
-                    <h3>Films</h3>
-                    <video src=""></video>
-                </article>
-                <article>
-                    <h3>Series</h3>
-                    <video src=""></video>
-                </article>
-                <article>
-                    <h3>Documentaires</h3>
-                    <video src=""></video>
-                </article>
-                <article>
-                    <h3>Dessins animés</h3>
-                    <video src=""></video>
-                </article>
+               
         </section>
     </main>
-
+    <!-- footer -->
     <footer>
         <img class="logo" src="images/logo.png" alt="logo">
         <div>
@@ -151,10 +143,24 @@
                 <li><a href="#">Twitter</a></li>
             </ul>
         </div>
+
     </footer>
+        <!-- fontawsome -->
+        <script src="https://kit.fontawesome.com/a3d1ecc32e.js" crossorigin="anonymous"></script>
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+        </script>
+
+        <!-- bootstrap js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/user.class.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+        <!-- mes js -->
+        <script type="text/javascript" src="js/user.class.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
