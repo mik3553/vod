@@ -1,9 +1,14 @@
 
+#welcome {
+ 
+  color: gold;
+  text-align: right;
+}
 
 input[type=text], [type=email], [type=password] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc;S
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -33,9 +38,9 @@ input[type=submit]:hover {
 	background-color: #000000;
 	padding: 1rem;
 	width: 20rem;
-	margin-left: -11rem;
-	position: absolute;
-	top: 15rem;
+	margin-left: -10rem;
+	position: fixed;
+	top: 11rem;
 	left: 50%;
 }
 
@@ -47,20 +52,48 @@ input[type=submit]:hover {
 	background-color: #000000;
 	padding: 1rem;
 	width: 20rem;
-	margin-left: -11rem;
-	position: absolute;
-	top: 15rem;
+	margin-left: -10rem;
+	position: fixed;
+	top: 11rem;
 	left: 50%;
 }
 
-.passWarning {
-	display: none;
+#inscription {
+  text-shadow: -2px -2px 6px white;
 }
+
+#connexion {
+  text-shadow: 2px -2px 6px white;
+}
+
+#pied {
+  position: fixed;
+  left: 80% ;
+  top: 90%;
+  opacity: 0.3;
+}
+
+
+.imgCat {
+  height: 23rem;
+  width: 25rem;
+  display: block;
+  margin: 0rem auto 4rem auto;
+}
+
+
+.warning, .warningUser, .warningCheckPass, .warningEmail, .warningCheckEmail, .warningCheckUserAuth{
+	display: none;
+  padding: 0.15rem 0;
+  margin-top: -0.80rem;
+}
+
 
 .close {
 	float: right;
 	color: white;
 	background-color: gold;
+  border-radius: 50%;
 }
 .close:hover {
 	color: white;
@@ -79,15 +112,17 @@ body {
 }
 
 main {
-	margin: 1rem 2rem;
+	margin: 0.5rem 0.5rem;
 }
 
 a {
 	text-decoration: none;
 	color: whitesmoke;
+
 }
 a:hover {
 	color: gold;
+  text-decoration-line: none;
 }
 
 p {
@@ -106,21 +141,21 @@ ul{
 header {
 	padding: 1rem;
 	background-color: black;
-
+  display:flex;
+  flex-direction: column;
 }
 
 .logo {
 	display: block;
 	margin: 0 auto;
-	width: 8rem;
+	width: 5rem;
 	text-align: center;
-
 }
 
 h1 {
 	font-size: 3rem;
 	color: #B6C6D4;
-	text-shadow: 3px 3px 3px grey;
+	text-shadow: 1px -3px 15px grey;
 	text-align: center;
 }
 
@@ -134,9 +169,6 @@ strong {
 	text-align: center;
 }
 
-header div {
-	text-align: center;
-}
 
 
 .mainNAv {
@@ -150,9 +182,7 @@ header div {
 	justify-content: space-evenly;
 	margin-top : 0.5rem;
 }
-.flexFirst li {
-	margin:0 1rem;
-}
+
 
 .flexLi {
 	display: flex;
@@ -163,8 +193,7 @@ header div {
 	border-bottom-left-radius: 1rem;
 }
 
- .tableauAbonnement 
- {
+ .tableauAbonnement {
 	display: flex;
 	flex-wrap: wrap;
     border: 5px;
@@ -183,16 +212,15 @@ header div {
 	border-radius: 1rem;
 }
 
-
-
 h2 { 
 	color: whitesmoke;
 	text-align: center;
 }
 
 
+
 section {
-	margin: 1rem auto;
+	margin: 0.5rem auto;
 	padding: 1rem 1rem;
 	border: 1px solid black;
 	border-radius: 1rem;
@@ -202,30 +230,26 @@ section {
 	background-color: black;
 }
 
-.sectionGenre div {
-	background-color: rgb(77, 77, 77);
-	padding: 1rem;
-}
-.sectionGenre article{
+/*.sectionGenre article{
 	background-color: grey;
 	width: 90%;
 	margin: 0 auto 1rem auto;
 	padding-bottom: 1.5rem;
 	border: 1px solid white;
 	border-radius: 1rem;
-}
+}*/
 
-.sectionGenre video {
+/*.sectionGenre video {
 	display: block;
 	width: 90%;
 	border : 5px solid black;
 	margin: 0 auto;
 	border: 1px solid black;
 	border-radius: 1rem;
-}
+}*/
 
 .sectionGenre h3 {
-	color: black;
+	color: white;
 }
 
 
@@ -233,6 +257,8 @@ section {
 footer {
 	background-color: black;
 	padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 footer div {
@@ -242,6 +268,111 @@ footer div {
 header a, footer a, strong {
 	color: whitesmoke;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
