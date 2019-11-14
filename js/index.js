@@ -14,6 +14,18 @@
  		$("#formConnect").slideUp();
  	})
 
+ 	// pour faire apparaitre les offres en mobile
+ 	$(".openP").on("click" ,function(e){
+ 		$(this).siblings("p").slideToggle();
+
+ 		if ($(this).siblings("p") == "hidden" ) {
+ 			$(".openP i").addClass("fas fa-arrow-circle-down");
+ 		}
+ 		else {
+ 			$(".openP i").addClass("fas fa-arrow-circle-up");
+ 		}
+ 	})
+
  	// event au click du submit de notre formulaire inscription
  	$("#inscriptionForm input[type=submit]").click(function(e){
  		// e.preventDefault();
@@ -92,12 +104,16 @@
 // ===============Afficher nos categories=====================================================================================================================
 	
 	let categorys = "https://brianboudrioux.fr/simplon/api/categories";
-	$.get( categorys, {})
+	$.get( categorys)
 	// escma6
 	.done(function(data, status){
 		$.each( data, function(i,item) {
-			$("<h3>").text(item.description).appendTo( ".sectionGenre" );
-			$("<img class='imgCat'>").attr("src", item.picture).appendTo( ".sectionGenre" );
+			let article = $("<article>");
+			let titre = $("<h3>").text(item.description);
+			let img = $("<img class='imgCat'>").attr("src", item.picture);
+			article.appendTo(".sectionGenre");
+			titre.appendTo(article);
+			img.appendTo(article);
 		});      
 	})
 });

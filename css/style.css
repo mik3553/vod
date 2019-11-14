@@ -5,6 +5,11 @@
   text-align: right;
 }
 
+.forms {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 input[type=text], [type=email], [type=password] {
   width: 100%;
   padding: 12px;
@@ -73,21 +78,11 @@ input[type=submit]:hover {
   opacity: 0.3;
 }
 
-
-.imgCat {
-  height: 23rem;
-  width: 25rem;
-  display: block;
-  margin: 0rem auto 4rem auto;
-}
-
-
 .warning, .warningUser, .warningCheckPass, .warningEmail, .warningCheckEmail, .warningCheckUserAuth{
 	display: none;
   padding: 0.15rem 0;
   margin-top: -0.80rem;
 }
-
 
 .close {
 	float: right;
@@ -95,6 +90,7 @@ input[type=submit]:hover {
 	background-color: gold;
   border-radius: 50%;
 }
+
 .close:hover {
 	color: white;
 	background-color: red;
@@ -153,7 +149,7 @@ header {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	color: #B6C6D4;
 	text-shadow: 1px -3px 15px grey;
 	text-align: center;
@@ -194,23 +190,42 @@ strong {
 }
 
  .tableauAbonnement {
-	display: flex;
-	flex-wrap: wrap;
-    border: 5px;
-    border-color: black;
-    margin-top:1px;
-    background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px;
+  border-color: black;
+  margin-top:1px;
+  background-color: grey;
 }
 
 .tableauAbonnement article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	border: 1px solid black;
-	padding: 1rem;
 	background-color: black;
 	margin: 0 auto 1rem auto;
 	width: 90%;
 	border: 1px solid white;
 	border-radius: 1rem;
 }
+.tableauAbonnement article p {
+  display: none;
+  padding: 1rem;
+}
+
+.openP {
+  width: 100%;
+  background-color: rgb(77, 77, 77);
+  border: 1px solid white;
+  border-radius: 1rem;
+
+}
+
+.offre {
+  background-color: grey;
+}
+
 
 h2 { 
 	color: whitesmoke;
@@ -230,14 +245,25 @@ section {
 	background-color: black;
 }
 
-/*.sectionGenre article{
+.sectionGenre article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	background-color: grey;
-	width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+/*	width: 90%;
 	margin: 0 auto 1rem auto;
 	padding-bottom: 1.5rem;
 	border: 1px solid white;
-	border-radius: 1rem;
-}*/
+	border-radius: 1rem;*/
+}
+
+.sectionGenre img {
+  height: 13rem;
+  width: 15rem;
+ 
+}
 
 /*.sectionGenre video {
 	display: block;
@@ -249,9 +275,8 @@ section {
 }*/
 
 .sectionGenre h3 {
-	color: white;
+	color: black;
 }
-
 
 
 footer {
