@@ -109,6 +109,8 @@
 	$.get( categorys)
 	// escma6
 	.done(function(data, status){
+		console.log(data);
+		console.log(status);
 		$.each( data, function(i,item) {
 			let article = $("<article>");
 			let titre = $("<h3>").text(item.description);
@@ -118,6 +120,20 @@
 			img.appendTo(article);
 		});      
 	})
+
+	var catFilm = "https://brianboudrioux.fr/simplon/api/categories";
+
+ 	$.get(catFilm ,function(data, status) {
+ 		console.log(data);
+ 	
+ 		$.each(data, function(i, element) {
+ 			$("<h3>").text(element.description).appendTo(".sectionGenre");
+ 			$("<img>").attr("src", element.picture).appendTo(".sectionGenre");
+ 		})
+ 
+
+ 	})
+ 	
 });
 
 
@@ -128,12 +144,3 @@
 
 
 
-
-
-
-
-
-
- 
-
- // seo growth hacking;   template maquette charte graphique location autocar astuce indexation robot par 3eme page 
