@@ -66,6 +66,9 @@ input[type=submit]:hover {
 	color: white;
 	background-color: red;
 }
+.warningUser {
+  display: none;
+}
 
 h3 {
   color: white;

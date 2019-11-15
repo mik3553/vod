@@ -46,4 +46,17 @@
  		// fonction du localStorage de nos identifiant users
  	})
 
+ 	var catFilm = "https://brianboudrioux.fr/simplon/api/categories";
+
+ 	$.get(catFilm ,function(data, status) {
+ 		console.log(data);
+ 	
+ 		$.each(data, function(i, element) {
+ 			$("<h3>").text(element.description).appendTo(".sectionGenre");
+ 			$("<img>").attr("src", element.picture).appendTo(".sectionGenre");
+ 		})
+ 
+
+ 	})
+
  });
