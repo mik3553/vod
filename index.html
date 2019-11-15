@@ -12,8 +12,10 @@
 
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <span id="remonter"></span>
+
     <body>
+        <span id="remonter"></span>
+
         <header>
             <div id="welcome"></div>
             <img class="logo" src="images/logo.png" alt="logo">
@@ -33,118 +35,108 @@
             </ul>
         </nav>
 
-        <div id="formInscri">
-            <span class="close">&times</span>
-                <h3>inscription</h3>
-                <form action="#" id="inscriptionForm" method="post">
-                
-                <input type="text" id="username" placeholder="Your name..">
-                <div class="warningUser" role="alert">Veuillez enregister un pseudo valide
-                </div>
-                
-                <input type="email" id="mail" placeholder="your email..">
-                <div class="warningEmail" role="alert">Veuillez enregister un email valide
-                </div>
-                <div class="warningCheckEmail" role="alert">Email déja utilisé !
-                </div>
-            
-                <input type="password" id="password" placeholder="tape your passworde..">
-                <!-- <span class="close" title="8 caractére avec au moins une majucule, un chiffre, un caractére special">?</span> -->
-                <div class="warning" role="alert">Veuillez enregister un mot de pass valide
-                </div>
-                <input type="password" id="passwordC" placeholder="confirm your passworde..">
-                <div class="warningCheckPass" role="alert">Veuillez confirmer votre mot de passe
-                </div>
-            
-                <input type="submit" value="submit">
-            </form>
-        </div>
-        <div id="formConnect">
-            <span class="close">&times</span>
-            <h3>connexion</h3>
-            <div class="warningCheckUserAuth" role="alert">Identifiants incorrectes</div>
-            <form action="" id="connexionForm">
-                
-            <input type="email" id="coEmail" placeholder="your email..">
-            
-            <input type="password" id="coPassword"placeholder="your password..">
-                
-            <input type="submit" value="submit">
-            </form>
-        </div>
-        
-    <main>
-        <section class="tableauAbonnement">
-            
-            <h2>Nos abonnements</h2>
+        <main>
+            <section class="forms">
+                <article id="formInscri">
+                    <span class="close">&times</span>
+                    <h3>inscription</h3>
+                    <form action="#" id="inscriptionForm" method="post">
+                        <input type="text" id="username" placeholder="Your name..">
+                        <div class="warningUser" role="alert">Veuillez enregister un pseudo valide</div>
+                        
+                        <input type="email" id="mail" placeholder="your email..">
+                        <div class="warningEmail" role="alert">Veuillez enregister un email valide</div>
+                        <div class="warningCheckEmail" role="alert">Email déja utilisé !</div>
+                    
+                        <input type="password" id="password" placeholder="tape your passworde..">
+                        <div class="warning" role="alert">Veuillez enregister un mot de pass valide</div>
 
-            <article class="vintageOne">
-                <h3>Vint'age One<b>"only"</b></h3>
-                <p> Disponibilité vint'age mov'is.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <input type="password" id="passwordC" placeholder="confirm your passworde..">
+                        <div class="warningCheckPass" role="alert">Veuillez confirmer votre mot de passe</div>
+                    
+                        <input type="submit" value="submit">
+                    </form>
+                </article>
+                <article id="formConnect">
+                    <span class="close">&times</span>
+                    <h3>connexion</h3>
+                    <div class="warningCheckUserAuth" role="alert">Identifiants incorrectes</div>
+                    <form action="" id="connexionForm">
+                        <input type="email" id="coEmail" placeholder="your email..">
+                        <input type="password" id="coPassword"placeholder="your password..">
+                        <input type="submit" value="submit">
+                    </form>
+                </article>
+            </section>
+
+            <section class="tableauAbonnement">
+                <h2>Nos abonnements</h2>
+                <article>
+                    <h3>Vint'age One<b>"only"</b></h3>
+                    <span>prix = <b>20</b> Dinhars.</span>
+                    <p class="offre"> Disponibilité vint'age mov'is.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                </article>
+                <article>
+                    <h3>vint'age Houzz</h3>
+                    <span>Prix = <b>100</b> Chouquettes.</span>
+                    <p class="offre">vint'age en famille.
+                        double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                <span>prix = <b>20</b> Dinhars.</span>
-            </article>
-            <article class="vintageHouzz">
-                <h3>vint'age Houzz</h3>
-                <p>vint'age en famille.
-                    double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <span>Prix = <b>100</b> Chouquettes.</span>
-            </article>
-            <a href="#remonter" id="pied"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
-            <article class="vintageNlive">
-                <h3>Vint'age N'Live</h3>
-                <p>Vint'age dans votre poche.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <span>Prix = <b>100</b> Francs/mois</span>
-            </article>
-        </section>
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                    
+                </article>
+                <a href="#remonter" id="pied"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+                <article>
+                    <h3>Vint'age N'Live</h3>
+                    <span>Prix = <b>100</b> Francs/mois</span>
+                    <p class="offre">Vint'age dans votre poche.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                   
+                </article>
+            </section>
 
-       
-                
-        <section class="sectionGenre">
-            
-                <h2>Nos categories</h2>
-            
-               
-        </section>
-    </main>
-    <!-- footer -->
-    <footer>
-        <img class="logo" src="images/logo.png" alt="logo">
-        <div>
-            <ul>
-                <li><h4>Condition et Usage</h4></li>
-                <li><a href="">Conditions générales d'utilisation</a></li>
-                <li><a href="">Conditions générales de vente</a></li>
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><h4>Suivez nous sur :</h4></li>
-                <li><a href="#">Google+</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
-        </div>
+            <section class="sectionGenre">
+                    <h2>Nos categories</h2>
+            </section>
+        </main>
 
-    </footer>
+        <footer>
+            <img class="logo" src="images/logo.png" alt="logo">
+            <div>
+                <ul>
+                    <li><h4>Condition et Usage</h4></li>
+                    <li><a href="">Conditions générales d'utilisation</a></li>
+                    <li><a href="">Conditions générales de vente</a></li>
+                    <li><a href="">Mentions légales</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><h4>Suivez nous sur :</h4></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </footer>
         <!-- fontawsome -->
         <script src="https://kit.fontawesome.com/a3d1ecc32e.js" crossorigin="anonymous"></script>
 
