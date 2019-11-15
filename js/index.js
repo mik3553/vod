@@ -15,15 +15,17 @@
  	})
 
  	// pour faire apparaitre les offres en mobile
- 	$(".openP").on("click" ,function(e){
+ 	$(".openP").click(function(){
  		$(this).siblings("p").slideToggle();
 
- 		if ($(this).siblings("p") == "hidden" ) {
+ 		if ($(".offre") === "hidden") {
  			$(".openP i").addClass("fas fa-arrow-circle-down");
  		}
  		else {
+ 			$(".openP i").removeClass("fas fa-arrow-circle-up");
  			$(".openP i").addClass("fas fa-arrow-circle-up");
  		}
+
  	})
 
  	// event au click du submit de notre formulaire inscription
