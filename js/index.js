@@ -1,11 +1,11 @@
  $(document).ready(function(event) {
 
  	// pour faire apparaitre les formulaire inscription / connexion
- 	$("#inscription").click(function(e){
+ 	$("#inscription a").click(function(e){
  		$("#formInscri").slideDown();
  		$("h1").addClass("light");
  	})
- 	$("#connexion").click(function(){
+ 	$("#connexion a").click(function(){
  		$("#formConnect").slideDown();
  		$("h1").addClass("light");
  	})
@@ -91,7 +91,9 @@
 					 			if (data.auth == true) {
 					 				console.log("data_auth :",data.auth)
 					 				console.log("hello :"+data.user.username);
-					 				$("#welcome").text(`Bonjour ${data.user.username}`);
+					 				$("#connexion").text(`Bonjour ${data.user.username}`);
+					 				$("#deconnexion").show();
+					 				$("#inscription").hide();
 					 				$("#monCompte").text("Mon compte");
 					 				$(".warningCheckUserAuth").hide();
 					 				$("#formConnect").slideUp();
@@ -109,30 +111,18 @@
 	$.get( categorys)
 	// escma6
 	.done(function(data, status){
-		console.log(data);
-		console.log(status);
+
 		$.each( data, function(i,item) {
+
 			let article = $("<article>");
 			let titre = $("<h3>").text(item.description);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
-			article.appendTo(".sectionGenre");
+			article.appendTo(".sectionFlex");
 			titre.appendTo(article);
 			img.appendTo(article);
 		});      
 	})
 
-	var catFilm = "https://brianboudrioux.fr/simplon/api/categories";
-
- 	$.get(catFilm ,function(data, status) {
- 		console.log(data);
- 	
- 		$.each(data, function(i, element) {
- 			$("<h3>").text(element.description).appendTo(".sectionGenre");
- 			$("<img>").attr("src", element.picture).appendTo(".sectionGenre");
- 		})
- 
-
- 	})
  	
 });
 

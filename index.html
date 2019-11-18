@@ -15,14 +15,17 @@
         <span id="remonter"></span>
 
         <header>
-            <div id="welcome"></div>
-            <img class="logo" src="images/logo.png" alt="logo">
-            <h1>Vint'age Mov'is</h1>
+            <!-- <div id="welcome"></div> -->
+            <div class="logoH1">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <h1>Vint'age Mov'is</h1>
+            </div>
             <strong>Toutes vos videos Vintage en un seul site</strong>
-                <ul class="flexLiFirst">
-                    <li id="inscription"><a href="#">inscription</a></li>
-                    <li id="connexion"> <a href="#">connexion</a> </li>
-                </ul> 
+            <ul class="flexLiFirst">
+                <li id="inscription"><a href="#">Inscription</a></li>
+                <li id="connexion"> <a href="#">Connexion</a> </li>
+                <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
+            </ul> 
         </header>
 
         <nav class="mainNAv">
@@ -38,9 +41,11 @@
                     <span class="close">&times</span>
                     <h3>inscription</h3>
                     <form action="#" id="inscriptionForm" method="post">
+                        <label for="username">Pseudo:</label>
                         <input type="text" id="username" placeholder="Your name..">
                         <div class="warningUser" role="alert">Veuillez enregister un pseudo valide</div>
                         
+                        <label for="mail">e-mail::</label>
                         <input type="email" id="mail" placeholder="your email..">
                         <div class="warningEmail" role="alert">Veuillez enregister un email valide</div>
                         <div class="warningCheckEmail" role="alert">Email déja utilisé !</div>
@@ -68,60 +73,57 @@
 
             <section class="tableauAbonnement">
                 <h2>Nos abonnements</h2>
-                <article>
-                    <h3>Vint'age One<b>"only"</b></h3>
-                    <span>prix = <b>20</b> Dinhars.</span>
-                    <p class="offre"> Disponibilité vint'age mov'is.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                <div class="aboFlex">
+                    <article>
+                        <h3>Vint'age One<b>"only"</b></h3>
+                        <span>prix = <b>20</b> Dinhars.</span>
+                        <p class="offre"> Disponibilité vint'age mov'is.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                    </article>
+                    <article>
+                        <h3>vint'age Houzz</h3>
+                        <span>Prix = <b>100</b> Chouquettes.</span>
+                        <p class="offre">vint'age en famille.
+                            double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                    <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
-                </article>
-                <article>
-                    <h3>vint'age Houzz</h3>
-                    <span>Prix = <b>100</b> Chouquettes.</span>
-                    <p class="offre">vint'age en famille.
-                        double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                <span>prix = <b>20</b> Dinhars.</span>
-            </article>
-            <article class="vintageHouzz">
-                <h3>vint'age Houzz</h3>
-                <p>vint'age en famille.
-                    double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <span>Prix = <b>100</b> Chouquettes.</span>
-            </article>
-            <article class="vintageNlive">
-                <h3>Vint'age N'Live</h3>
-                <p>Vint'age dans votre poche.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <span>Prix = <b>100</b> Francs/mois</span>
-            </article>
-        </section>
-        <!-- fin section abonnement -->
-                
-        <section class="sectionGenre">
-            
-                <h2>Nos categories</h2>
-            
-                
-        </section>
-    </main>
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                        
+                    </article>
+                    <a href="#remonter" id="pied"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+                    <article>
+                        <h3>Vint'age N'Live</h3>
+                        <span>Prix = <b>100</b> Francs/mois</span>
+                        <p class="offre">Vint'age dans votre poche.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                       
+                    </article>
+                </div>
+            </section>
+
+            <section class="sectionGenre">
+                    <h2>Nos categories</h2>
+                    <div class="sectionFlex"></div>
+            </section>
+        </main>
+
         <footer>
-            <img class="logo" src="images/logo.png" alt="logo">
+            <div><img class="logo" src="images/logo.png" alt="logo"></div>
             <div>
                 <ul>
                     <li><h4>Condition et Usage</h4></li>
@@ -133,10 +135,11 @@
             </div>
             <div>
                 <ul>
-                    <li><h4>Suivez nous sur :</h4></li>
+                    <li><h4>Suivez nous sur</h4></li>
                     <li><a href="#">Google+</a></li>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
                 </ul>
             </div>
         </footer>
