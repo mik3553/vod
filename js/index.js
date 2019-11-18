@@ -132,15 +132,25 @@
  		})
  
 
+ 	var toutFilmSer = "https://brianboudrioux.fr/simplon/api/products"
+ 		$.get(toutFilmSer, {}) // Avant le ".done", pas de points virgules.
+
+
+
+
+ 			.done(function(data, status) {
+ 				console.log(data);
+ 				console.log(status);
+ 				$.each(data, function(index, element) {
+
+ 					let article = $("<article>");
+ 					let titre = $("<h3>").text(element.description);
+					let vid = $("<img class='videoCat'>").attr("src", element.picture);
+
+					article.appendTo(".gallerie");
+					titre.appendTo(article);
+					vid.appendTo(article);
+ 				})
+ 			})
  	})
- 	
 });
-
-
-
-
-
-
-
-
-
