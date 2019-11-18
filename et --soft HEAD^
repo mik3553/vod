@@ -1,0 +1,198 @@
+[33mcommit 2140c9c19b9718d20019d6079668bf7bdbba59ac[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 06eb66c 245787d
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Nov 15 10:17:42 2019 +0100
+
+    Merge branch 'abdel'
+
+[33mcommit 245787d6100e32df4244da85ead168af08438ae3[m[33m ([m[1;31morigin/abdel[m[33m, [m[1;32mabdel[m[33m)[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Nov 15 10:16:13 2019 +0100
+
+    banderol améliorer
+
+[33mcommit 380c10d7abb8fc35804e6ed011edf7bfb05bba70[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Thu Nov 14 17:03:28 2019 +0100
+
+    section banderol
+
+[33mcommit 06eb66c234a1cc18e73e10b0dfa1760c7de75250[m
+Merge: 8a7a0f1 a09c684
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Wed Nov 13 09:46:18 2019 +0100
+
+    Merge branch 'abdel'
+
+[33mcommit a09c68406ebdcaf35d39faf694868de017d07955[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Wed Nov 13 09:42:23 2019 +0100
+
+    api users-cat
+
+[33mcommit 8a7a0f1f8f4217e2f9577ec3688da5cb346dafaa[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: a66d8bc 98b9f3e
+Author: mik3553 <49455545+mik3553@users.noreply.github.com>
+Date:   Wed Nov 6 10:56:33 2019 +0100
+
+    Merge pull request #5 from mik3553/abdel
+    
+    mise a jour mardi
+
+[33mcommit 98b9f3ef727eec8280649c3281235253851fd396[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Wed Nov 6 10:13:19 2019 +0100
+
+    mise a jour mardi
+
+[33mcommit a66d8bcd6216d846a7f566ae93944d8e748e7839[m
+Merge: ca6c51a b3a6a2f
+Author: mik3553 <49455545+mik3553@users.noreply.github.com>
+Date:   Tue Nov 5 15:19:45 2019 +0100
+
+    Merge pull request #4 from mik3553/abdel
+    
+    mise a jour js
+
+[33mcommit b3a6a2f0edef49daefca0babbbf70c6e3842c250[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Tue Nov 5 15:14:52 2019 +0100
+
+    mise a jour js
+
+[33mcommit ca6c51a6063860fb07ddcedd7bb61a31b6b4d9cb[m
+Merge: 75ba358 58f68fd
+Author: mik3553 <49455545+mik3553@users.noreply.github.com>
+Date:   Mon Nov 4 11:26:58 2019 +0100
+
+    Merge pull request #3 from mik3553/farabdel
+    
+    Farabdel
+
+[33mcommit 58f68fda417af76c7b5a3243497393cbb9f85f5d[m[33m ([m[1;31morigin/farabdel[m[33m)[m
+Merge: 3621b54 75ba358
+Author: mik3553 <49455545+mik3553@users.noreply.github.com>
+Date:   Mon Nov 4 11:26:45 2019 +0100
+
+    Merge branch 'master' into farabdel
+
+[33mcommit 75ba35865761619c0cfaf8b70e8bc7866f2ff82c[m
+Merge: 22398f5 20d4af9
+Author: mik3553 <49455545+mik3553@users.noreply.github.com>
+Date:   Mon Nov 4 11:21:30 2019 +0100
+
+    Merge pull request #2 from mik3553/abdel
+    
+    Abdel
+
+[33mcommit 3621b548a52cef6c0e421b1d2a9eb5077ba1274d[m
+Author: ANGOUNOU <jcangounou@hotmail.fr>
+Date:   Mon Nov 4 10:58:35 2019 +0100
+
+     pub avant vod2
+
+[33mcommit 20d4af9709b651bd8f4213c7fad2a14313a239f6[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Oct 18 14:55:19 2019 +0200
+
+    Nos genre
+
+[33mcommit 7b5d0bc28629a43465385b961046ff7dea7c2968[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Oct 18 14:51:43 2019 +0200
+
+    Nos genre
+
+[33mcommit b4a63222f99646c7f569ce83bad91a6c6b89cd30[m
+Author: ANGOUNOU <jcangounou@hotmail.fr>
+Date:   Fri Oct 18 14:41:09 2019 +0200
+
+    banderolles NOs offres
+
+[33mcommit 22398f5a3050e0897631d4a71108b22c3cc247e2[m
+Merge: 1804e21 3a2ef4a
+Author: fares96 <fares96111@gmail.com>
+Date:   Fri Oct 18 14:26:07 2019 +0200
+
+    fix merge
+
+[33mcommit 1804e214fd784a92299111748cbbbadce8a2dc2e[m
+Author: fares96 <fares96111@gmail.com>
+Date:   Fri Oct 18 14:23:35 2019 +0200
+
+    test
+
+[33mcommit 69e60e85af43bcd12e86abf0e7e505bd42806a12[m
+Merge: bccde31 0d0f469
+Author: fares96 <fares96111@gmail.com>
+Date:   Fri Oct 18 12:24:35 2019 +0200
+
+    Merge branch 'fares'
+
+[33mcommit 0d0f469a36ea421688e52c6e241606dc930567e0[m
+Author: fares96 <fares96111@gmail.com>
+Date:   Fri Oct 18 12:21:20 2019 +0200
+
+    first commit
+
+[33mcommit bccde3128bbc0acf54c1b9251440c409fd22b2e0[m
+Merge: a83b7d6 d899dbd
+Author: fares96 <fares96111@gmail.com>
+Date:   Fri Oct 18 11:39:55 2019 +0200
+
+    Merge branch 'fares'
+
+[33mcommit 3a2ef4a438a1d4f28ff7b46652dad34861d769d1[m
+Merge: a83b7d6 e415f8c
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Oct 18 11:33:03 2019 +0200
+
+    Merge branch 'abdel'
+
+[33mcommit e415f8c1641b6f8d331094727bb51fd9a936fea1[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Fri Oct 18 11:27:56 2019 +0200
+
+    footer et header fini
+
+[33mcommit 0cbdbb1724096391b650b4caf705c4213a975e96[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Thu Oct 17 16:22:17 2019 +0200
+
+    insertion maquette GIMP
+
+[33mcommit 583a36da2a794f1194976b2010262cb22f298c86[m
+Author: ANGOUNOU <jcangounou@hotmail.fr>
+Date:   Thu Oct 17 10:18:14 2019 +0200
+
+     abbonnements avec vintage
+
+[33mcommit d899dbd5d5d1266f0c73e74fec9132a18f2c11ea[m
+Author: fares96 <fares96111@gmail.com>
+Date:   Tue Oct 15 12:24:06 2019 +0200
+
+    formulaire de contact
+
+[33mcommit 1eed2cc18a4720839d1484260ba285e8c2c65c50[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Tue Oct 15 11:43:16 2019 +0200
+
+    step1
+
+[33mcommit a83b7d63d00ed7f8ca788b462bda672d74774585[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Tue Oct 15 10:30:44 2019 +0200
+
+    fisrt step
+
+[33mcommit cdb7bc494bb10b747b7bda9b3e4badb3e50086c9[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Mon Oct 14 14:09:09 2019 +0200
+
+    dossier VOD
+
+[33mcommit d8f7c547fc2aa4ddc56189cac22cb3a0fa45ca35[m
+Author: Abdelkrim <https://github.com/mik3553/>
+Date:   Mon Oct 14 12:51:20 2019 +0200
+
+    vod project
