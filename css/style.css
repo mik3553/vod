@@ -1,5 +1,6 @@
 
 #welcome {
+ 
   color: gold;
   text-align: right;
 }
@@ -9,7 +10,6 @@
   padding: 0;
   border: none;
 }
-
 input[type=text], [type=email], [type=password] {
   width: 100%;
   padding: 12px;
@@ -32,6 +32,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: rgb(192, 192, 192);
+  
 }
 
 #formInscri {
@@ -68,6 +69,11 @@ input[type=submit]:hover {
 
 #connexion {
   text-shadow: 2px -2px 6px white;
+}
+
+#deconnexion {
+  text-shadow: 2px -2px 6px white;
+  display: none;
 }
 
 #pied {
@@ -121,6 +127,10 @@ a {
 a:hover {
 	color: gold;
   text-decoration-line: none;
+}
+
+label {
+  color:white;
 }
 
 p {
@@ -192,8 +202,7 @@ strong {
 }
 
  .tableauAbonnement {
-  display: flex;
-  flex-wrap: wrap;
+
   border: 5px;
   border-color: black;
   margin-top:1px;
@@ -215,6 +224,7 @@ strong {
 .tableauAbonnement article p {
   display: none;
   padding: 1rem;
+  background-color:  rgb(77, 77, 77);
 }
 
 .openP {
@@ -225,9 +235,6 @@ strong {
 
 }
 
-.offre {
-  background-color: grey;
-}
 
 
 h2 { 
@@ -267,15 +274,6 @@ section {
  
 }
 
-/*.sectionGenre video {
-	display: block;
-	width: 90%;
-	border : 5px solid black;
-	margin: 0 auto;
-	border: 1px solid black;
-	border-radius: 1rem;
-}*/
-
 .sectionGenre h3 {
 	color: black;
 }
@@ -294,6 +292,113 @@ footer div {
 
 header a, footer a, strong {
 	color: whitesmoke;
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  main {
+    margin: 1rem 7rem;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logoH1 {
+    /*margin: 0 0 0 1rem;*/
+    width: 20%;
+    text-align: left;
+
+  }
+  h1{
+    margin: 0;
+  }
+  strong {
+    display: block;
+    text-align:center;
+    font-size: 2em;
+  }
+
+
+  .flexLiFirst {
+    width: 20%;
+    text-align:right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .aboFlex {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .openP {
+    display:none;
+  }
+
+  .offre {
+    display: block;
+    font-size: 1.5em;
+  }
+  .tableauAbonnement article {
+    margin: 0;
+    width: 32%;
+  }
+  .tableauAbonnement article p {
+    display: block;
+  }
+
+  .sectionFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sectionFlex article{
+    width: 30%;
+  }
+
+  a{
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  #formInscri {
+    width: 38rem;
+    margin-left: -18rem;
+  }
+
+  #formConnect {
+    width: 38rem;
+    margin-left: -18rem;
+  }
+
+
+
+
+
 }
 
 
