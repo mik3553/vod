@@ -111,7 +111,7 @@
 	$.get( categorys)
 	// escma6
 	.done(function(data, status){
-			console.log(data)
+
 		$.each( data, function(i,item) {
 
 			let article = $("<article>");
@@ -122,6 +122,8 @@
 			img.appendTo(article);
 		});      
 	})
+
+ 	
 });
 
 
@@ -132,12 +134,3 @@
 
 
 
-
-
-
-
-
-
- 
-
- // seo growth hacking;   template maquette charte graphique location autocar astuce indexation robot par 3eme page 
