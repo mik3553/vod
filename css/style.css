@@ -274,8 +274,14 @@ section {
  
 }
 
+
 .sectionGenre h3 {
 	color: black;
+}
+
+video {
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -376,6 +382,29 @@ header a, footer a, strong {
   .sectionFlex article{
     width: 30%;
   }
+
+  .sectionFlexFilm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sectionFlexFilm article{
+    width: 30%;
+  }
+
+  .section_Category_id {
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .section_Category_id article {
+    width: 30%;
+  }
+
 
   a{
     font-size: 1.2em;

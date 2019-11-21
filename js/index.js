@@ -105,16 +105,16 @@
 					 			}
  							})
  	})
-// ===============Afficher nos categories=====================================================================================================================
+// ===============Afficher nos categories page d'accueil=====================================================================================================================
 	
-	let categorys = "https://brianboudrioux.fr/simplon/api/categories";
-	$.get( categorys)
+	const categorys = "https://brianboudrioux.fr/simplon/api/categories";
+	$.get( categorys, {name: "kids"})
 	// escma6
 	.done(function(data, status){
 
 		$.each( data, function(i,item) {
 
-			let article = $("<article>");
+			let article = $("<article>").attr("data-id", item._id);
 			let titre = $("<h3>").text(item.description);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 			article.appendTo(".sectionFlex");
@@ -123,14 +123,47 @@
 		});      
 	})
 
- 	
+//==================Afficher nos films/series page displayOne========================================================================================
+	
+	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
+	$.get(filmSeries, function(data, status){
+		$.each(data , function(i,item){
+			let article = $("<article>");
+			let titre = $("<h3>").text(item.description);
+			let img = $("<img class='imgCat'>").attr("src", item.picture);
+
+			article.appendTo(".sectionFlexFilm");
+			titre.appendTo(article);
+			img.appendTo(article);
+
+		});
+	});
+
+	//Afficher les films/series correspondants a la categorie clicker page d'accueil
+
+	$(".sectionFlex").on("click","article", function(){
+
+		let id = $(this).data("id");
+		const category_id = "https://brianboudrioux.fr/simplon/api/products/category/"+id;
+		$(".sectionFlex").hide();
+		$(".sectionGenre h2").text("Categorie : "+$(this).children("h3") );
+
+		$.get(category_id, function(data , status){
+			console.log(data);
+
+			$.each(data, function(i, item){
+
+				let article = $("<article>");
+				let titre = $("<h3>").text(item.description);
+				let img = $("<img>").attr("src", item.picture);
+
+				article.appendTo(".section_Category_id");
+				titre.appendTo(article);
+				img.appendTo(article);
+			})
+		})
+	})
+
 });
 
-
-
-
-
-
-
-
-
+ 	
