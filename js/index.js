@@ -164,16 +164,19 @@
 		})
 	})
 
+
+//======Evenement au click de notre article(film/serie etc...) on récupére le media de l'api et on l'insére dans notre URL================
 	$(document).on("click",".media", function(e) {
 		let media = $(this).data("media");
-
 		$(location).attr("href", "displayOne.html?visionnage="+media);
-	
 	})
 
+//====================On récupére de notre url le lien avec le searchParams et on l'injecte dans notre src du Iframe==============================
 	const params = new URL(document.location).searchParams;
     const lien = params.get("visionnage");
 	$("iframe").attr("src", lien);
+
+
 });
 
  	
