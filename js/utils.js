@@ -2,7 +2,7 @@
 
 function checkUserName(username){
     if (username.length < 5){
-    	 $(".warningUser").show().addClass("alert alert-danger");
+    	$(".warningUser").show().addClass("alert alert-danger");
         return false;
     }
     else{
