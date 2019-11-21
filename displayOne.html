@@ -2,30 +2,127 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
         <title>Vintage Movis</title>
-       
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <span id="remonter"></span>
+
+        <header>
+            <!-- <div id="welcome"></div> -->
+            <div class="logoH1">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <h1>Vint'age Mov'is</h1>
+            </div>
+            <strong>Toutes vos videos Vintage en un seul site</strong>
+            <ul class="flexLiFirst">
+                <li id="inscription"><a href="#">Inscription</a></li>
+                <li id="connexion"> <a href="#">Connexion</a> </li>
+                <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
+            </ul> 
+        </header>
+        <nav class="mainNAv">
+            <ul class="flexLi">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
+                <li><a href="displayAll.html">Gallerie</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="forms">
+                <article id="formInscri">
+                    <span class="close">&times</span>
+                    <h3>inscription</h3>
+                    <form action="#" id="inscriptionForm" method="post">
+                        <label for="username">Pseudo:</label>
+                        <input type="text" id="username" placeholder="Your name..">
+                        <div class="warningUser" role="alert">Veuillez enregister un pseudo valide</div>
+                        
+                        <label for="mail">e-mail::</label>
+                        <input type="email" id="mail" placeholder="your email..">
+                        <div class="warningEmail" role="alert">Veuillez enregister un email valide</div>
+                        <div class="warningCheckEmail" role="alert">Email déja utilisé !</div>
+                    
+                        <input type="password" id="password" placeholder="tape your passworde..">
+                        <div class="warning" role="alert">Veuillez enregister un mot de pass valide</div>
+
+                        <input type="password" id="passwordC" placeholder="confirm your passworde..">
+                        <div class="warningCheckPass" role="alert">Veuillez confirmer votre mot de passe</div>
+                    
+                        <input type="submit" value="submit">
+                    </form>
+                </article>
+                <article id="formConnect">
+                    <span class="close">&times</span>
+                    <h3>connexion</h3>
+                    <div class="warningCheckUserAuth" role="alert">Identifiants incorrectes</div>
+                    <form action="" id="connexionForm">
+                        <input type="email" id="coEmail" placeholder="your email..">
+                        <input type="password" id="coPassword"placeholder="your password..">
+                        <input type="submit" value="submit">
+                    </form>
+                </article>
+            </section>
+            <section>
+                <video  controls="controls" src="https://www.youtube.com/embed/O2EmgMNbR7U">
+                 <!--  <source src="video.mp4" type="video/mp4" />
+                  <source src="video.webm" type="video/webm" />
+                  <source src="video.ogv" type="video/ogg" />
+                  Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc. -->
+                </video>
+                <!-- $(location).attr('href',"displayOne.html"); -->
+            </section>
+
+        </main>
+
+    
+
+        <footer>
+            <div><img class="logo" src="images/logo.png" alt="logo"></div>
+            <div>
+                <ul>
+                    <li><h4>Condition et Usage</h4></li>
+                    <li><a href="">Conditions générales d'utilisation</a></li>
+                    <li><a href="">Conditions générales de vente</a></li>
+                    <li><a href="">Mentions légales</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><h4>Suivez nous sur</h4></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- fontawsome -->
+        <script src="https://kit.fontawesome.com/a3d1ecc32e.js" crossorigin="anonymous"></script>
+
+        <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
         </script>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="images/logo.png" alt="logo">
-            <h1><img src="" alt="titre site"></h1>
-            <strong>Toutes vos videos Vintage en un seul site</strong>
-        </header>
-        
-        <main>
-            
-            
-        </main>
 
-        <footer>
-            <img class="logo" src="images/logo.png" alt="logo">
-        </footer>
+        <!-- bootstrap js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
+        <!-- mes js -->
+        <script type="text/javascript" src="js/user.class.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
