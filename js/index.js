@@ -115,7 +115,7 @@
 		$.each( data, function(i,item) {
 
 			let article = $("<article>").attr("data-id", item._id);
-			let titre = $("<h3>").text(item.description);
+			let titre = $("<h3>").text(item.name);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 			article.appendTo(".sectionFlex");
 			titre.appendTo(article);
@@ -127,8 +127,9 @@
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
 		$.each(data , function(i,item){
-			let article = $("<article class\"media\">");
-			let titre = $("<h3>").text(item.description);
+
+			let article = $("<article class=\"media\">").attr("data-media", item.media);;
+			let titre = $("<h3>").text(item.name);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 
 			article.appendTo(".sectionFlexFilm");
@@ -170,8 +171,8 @@
 
 			$.each(data, function(i, item){
 
-				let article = $("<article>");
-				let titre = $("<h3>").text(item.description);
+				let article = $("<article class=\"media\">").attr("data-media", item.media );
+				let titre = $("<h3>").text(item.name);
 				let img = $("<img>").attr("src", item.picture);
 
 				article.appendTo(".section_Category_id");
@@ -181,4 +182,14 @@
 		})
 	})
 
+	$(document).on("click",".media", function(e) {
+		let media = $(this).data("media");
+
+		$(location).attr("href", "displayOne.html?visionnage="+media);
+	
+	})
+
+	const params = new URL(document.location).searchParams;
+    const lien = params.get("visionnage");
+	$("iframe").attr("src", lien);
 });
