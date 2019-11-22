@@ -127,7 +127,7 @@
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
 		$.each(data , function(i,item){
-			let article = $("<article>");
+			let article = $("<article class\"media\">");
 			let titre = $("<h3>").text(item.description);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 
@@ -137,6 +137,24 @@
 
 		});
 	});
+
+	//Au clic du film de notre page displayAll, on redirige vers la page displayOne et on fait apparaitre le media correspondant.
+
+	const touslesFilms = "https://brianboudrioux.fr/simplon/api/products";
+
+	$(".sectionFlexFilm").on("click","article", function() {
+		document.location.href="displayOne.html";
+
+		/*let idFilm = article.id;
+		let titreFilm = item.description;
+		let film = article;*/
+		
+
+		/*$(this).article().show();*/
+
+			$(".media").show( $(this).media); 
+
+	})
 
 	//Afficher les films/series correspondants a la categorie clicker page d'accueil
 
