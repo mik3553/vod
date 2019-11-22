@@ -108,18 +108,22 @@
 // ===============Afficher nos categories page d'accueil=====================================================================================================================
 	
 	const categorys = "https://brianboudrioux.fr/simplon/api/categories";
-	$.get( categorys, {name: "kids"})
+	$.get( categorys)
 	// escma6
 	.done(function(data, status){
-
+		console.log(data)
 		$.each( data, function(i,item) {
 
-			let article = $("<article>").attr("data-id", item._id);
-			let titre = $("<h3>").text(item.name);
-			let img = $("<img class='imgCat'>").attr("src", item.picture);
-			article.appendTo(".sectionFlex");
-			titre.appendTo(article);
-			img.appendTo(article);
+			if (item.name == "kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires") {
+
+				let article = $("<article>").attr("data-id", item._id);
+				let titre = $("<h3>").text(item.name);
+				let img = $("<img class='imgCat'>").attr("src", item.picture);
+				article.appendTo(".sectionFlex");
+				titre.appendTo(article);
+				img.appendTo(article);
+			}
+
 		});      
 	})
 
@@ -128,7 +132,7 @@
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
 		$.each(data , function(i,item){
-			let article = $("<article class=\"media\">").attr("data-media", item.media);;
+			let article = $("<article class=\"media\">").attr("data-media", item.media);
 			let titre = $("<h3>").text(item.name);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 
@@ -139,16 +143,18 @@
 		});
 	});
 
-	//Afficher les films/series correspondants a la categorie clicker page d'accueil
+// ==================Afficher les films/series correspondants a la categorie clicker page d'accueil===============================
+	$(".sectionFlex").on("click","article", function(e){
 
-	$(".sectionFlex").on("click","article", function(){
-
+		$(".backCat").css("visibility", "visible");
 		let id = $(this).data("id");
+		let title = $(this).children("h3").html();
+
 		const category_id = "https://brianboudrioux.fr/simplon/api/products/category/"+id;
 		$(".sectionFlex").hide();
-		$(".sectionGenre h2").text("Categorie : "+$(this).children("h3") );
+		$(".sectionGenre h2").text("Categorie : " + title );
 
-		$.get(category_id, function(data , status){
+		$.get(category_id ,function(data , status){
 			console.log(data);
 
 			$.each(data, function(i, item){
@@ -164,16 +170,50 @@
 		})
 	})
 
-	$(document).on("click",".media", function(e) {
-		let media = $(this).data("media");
+//========Revenir a la categorie depuis la liste des films========================================
+	$(".backCat").click(()=>{
 
-		$(location).attr("href", "displayOne.html?visionnage="+media);
-	
+		$(location).attr("href", "index.html");
+		// $(".sectionFlex").show();
+		// $(".section_Category_id").hide();
+	})	
+//======Evenement au click de notre article(film/serie etc...) on récupére le media de l'api et on l'insére dans notre URL================
+	$(document).on("click",".media", function() {
+		let media = $(this).data("media");
+		$(location).attr("href", "displayOne.html?id="+media);
 	})
 
+//====================On récupére de notre url le lien avec le searchParams et on l'injecte dans notre src du Iframe==============================
 	const params = new URL(document.location).searchParams;
-    const lien = params.get("visionnage");
+    const lien = params.get("id");
 	$("iframe").attr("src", lien);
-});
 
- 	
+//====================la fonction search pour retourner la recherche===========================================
+
+	$(".sectionSearch").hide();
+	$(".search").on("change",function(){
+
+		$(".searchResults").empty();
+		$(".sectionSearch").show();
+		let inputVal = $(this).val();
+		let urlSearch ="https://brianboudrioux.fr/simplon/api/productsByName/" + inputVal;
+		$.get(urlSearch, function(data, status){
+			console.log(data);
+			$.each(data , function(i, item){
+
+				let article = $("<article class=\"media\">").attr("data-media", item.media);
+				let titre = $("<h3>").text(item.name);
+				let img = $("<img>").attr("src", item.picture);
+
+				article.appendTo(".searchResults");
+				titre.appendTo(article);
+				img.appendTo(article);
+
+			})
+		})
+	})
+
+
+
+	
+})

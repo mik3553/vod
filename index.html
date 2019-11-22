@@ -27,15 +27,22 @@
                 <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
             </ul> 
         </header>
+        <div>
+            <nav class="mainNAv">
+                <ul class="flexLi">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
+                    <li><a href="displayAll.html">Gallerie</a></li>
+                </ul>
+            </nav>
+            <input class="search" type="text" placeholder="rechercher">
+        </div>
 
-        <nav class="mainNAv">
-            <ul class="flexLi">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
-                <li><a href="displayAll.html">Gallerie</a></li>
-            </ul>
-        </nav>
         <main>
+            <section class="sectionSearch">
+                <h2>Resultat de la recherche</h2>
+                <div class="searchResults"></div>
+            </section>
             <section class="forms">
                 <article id="formInscri">
                     <span class="close">&times</span>
@@ -117,6 +124,7 @@
             </section>
 
             <section class="sectionGenre">
+                    <button type="button" class="backCat btn btn-secondary btn-sm">Retour vers categories</button>
                     <h2>Nos categories</h2>
                     <div class="sectionFlex"></div>
                     <div class="section_Category_id"></div>
