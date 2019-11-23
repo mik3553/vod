@@ -37,7 +37,8 @@
         </nav>
 
         <main>
-             <section class="forms">
+            <section class="searchResults sectionGenre"></section>
+            <section class="forms">
                 <article id="formInscri">
                     <span class="close">&times</span>
                     <h3>inscription</h3>
@@ -74,6 +75,30 @@
             <section class="sectionGenre">
                     <h2>Galleries</h2>
                     <div class="sectionFlexFilm"></div>
+                    <button type="button" class="btnAddProduct btn btn-secondary btn-sm">Ajouter films/series</button>
+                    <form id="formAddProduct" action="#">
+                        <div>
+                            <label for="name">name</label>
+                            <input type="text" id="nameAddP"></div>
+                        <div>
+                            <label for="description">description</label>
+                            <input type="text" id="descriptionAddP"></div>
+                        <div>
+                            <label for="image">image</label>
+                            <input type="text" id="imageAddP">
+                        </div>
+                        <div>
+                            <label for="media">media</label>
+                            <input type="text" id="mediaAddP">
+                        </div>
+                        <div>
+                            <label for="category">catégories</label>
+                            <input type="text" id="catAddP">
+                        </div>
+                        <div>
+                            <input type="submit" id="pushProducts" class="btn btn-secondary btn-sm" value="Envoyer">
+                        </div>
+                    </form>
             </section>
         </main>
 

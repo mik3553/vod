@@ -111,7 +111,7 @@
 		console.log(data)
 		$.each( data, function(i,item) {
 
-			if (item.name == "kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires"){
+			if (item.name == "kids" ||item.name == "Vintage Kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires" || item.name =="Vintage suspense"){
 
 				let article = $("<article>").attr("data-id", item._id);
 				let titre = $("<h3>").text(item.name);
@@ -122,9 +122,28 @@
 			}
 
 		});      
-	})
+	});
 
-//==================Afficher nos films/series page displayOne========================================================================================
+//=================Ajouter une catégorie====================================================================================
+	// $(".btnAddCat").insert($(".sectionFlex article"));
+	$(".btnAddCat").click(()=>{
+		$("#formAddCat").toggle();
+	});
+
+	$("#pushCategorie").click((e)=>{
+		e.preventDefault()
+		let addName = $("#nameAdd").val();
+		let addDescription = $("#descriptionAdd").val();
+		let addImage = $("#imageAdd").val();
+
+		const urlAddCat = "https://brianboudrioux.fr/simplon/api/categories";
+		$.post(urlAddCat, {name : addName, description: addDescription, picture: addImage}, (data, status)=>{
+			console.log(status);
+			console.log(data);
+		});
+	});
+
+//==================Afficher nos films/series page displayAll========================================================================================
 	
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
@@ -140,9 +159,31 @@
 		});
 	});
 
+//==================Ajouter un film=========================================================================================
+	$(".btnAddProduct").click(()=>{
+		$("#formAddProduct").toggle();
+	});
+
+	$("#pushProducts").click((e)=>{
+		e.preventDefault()
+		let addName = $("#nameAddP").val();
+		let addDescription = $("#descriptionAddP").val();
+		let addImage = $("#imageAddP").val();
+		let addMedia = $("#mediaAddP").val();
+		let addCat = $("#catAddP").val();
+
+		const urlAddProducts = "https://brianboudrioux.fr/simplon/api/products";
+		$.post(urlAddProducts, {name : addName, description: addDescription, picture: addImage, media : addMedia, category: addCat}, (data, status)=>{
+			console.log(status);
+			console.log(data);
+		});
+	});
+
+
 // ==================Afficher les films/series correspondants a la categorie clicker page d'accueil===============================
 	$(".sectionFlex").on("click","article", function(e){
 
+		$(".btnAddCat").hide();
 		$(".backCat").css({display: "block"});
 		let id = $(this).data("id");
 		let title = $(this).children("h3").html();
