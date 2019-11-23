@@ -38,7 +38,7 @@
  		if(checkUserName(username) == true && checkEmail(mail) == true && checkPass(password)==true && checkPassC(password, passwordC) == true ){
  			e.preventDefault();
  			// on instancie la class User
-	 		let user = new User(username, mail, password)
+	 		let user = new User(username, mail, password);
 	 		// on recupere notre user avec localStorage
 	 		localStorage.setItem("user", JSON.stringify(user));
 	 		// envoyer nos données saisies via ajax (post)
@@ -70,8 +70,8 @@
 
  	})
  	// on recuper notre localstorage pour afficher directement a la connexion l'email de notre user
-
- 	let user = localStorage.getItem("user");
+ 	let user = new User(username, mail, password)
+ 		user = localStorage.getItem("user");
         user = JSON.parse(user);
 	$("#coEmail").val(user.mail);
 
