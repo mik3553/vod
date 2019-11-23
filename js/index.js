@@ -70,9 +70,10 @@
 
  	})
  	// on recuper notre localstorage pour afficher directement a la connexion l'email de notre user
+
  	let user = localStorage.getItem("user");
         user = JSON.parse(user);
-	$("#coEmail").val(user.email);
+	$("#coEmail").val(user.mail);
 
 	// event au click de submit ne notre formulaire connexion
  	$("#connexionForm input[type=submit]").click(function(e){
