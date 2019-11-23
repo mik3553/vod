@@ -13,9 +13,8 @@
 
     <body>
         <span id="remonter"></span>
-
         <header>
-            <!-- <div id="welcome"></div> -->
+            <div id="welcome"></div>
             <div class="logoH1">
                 <img class="logo" src="images/logo.png" alt="logo">
                 <h1>Vint'age Mov'is</h1>
@@ -23,26 +22,22 @@
             <strong>Toutes vos videos Vintage en un seul site</strong>
             <ul class="flexLiFirst">
                 <li id="inscription"><a href="#">Inscription</a></li>
-                <li id="connexion"> <a href="#">Connexion</a> </li>
+                <li class="connexion"> <a href="#">Connexion</a> </li>
                 <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
             </ul> 
         </header>
-        <div>
-            <nav class="mainNAv">
-                <ul class="flexLi">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
-                    <li><a href="displayAll.html">Gallerie</a></li>
-                </ul>
-            </nav>
-            <input class="search" type="text" placeholder="rechercher">
-        </div>
+        <nav class="mainNAv">
+            <ul class="flexLi">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
+                <li><a href="displayAll.html">Gallerie</a></li>
+                <li><input class="search" type="text" placeholder="rechercher"></li>
+                <!-- <i class="fas fa-search"></i> -->
+            </ul>
+        </nav>
 
         <main>
-            <section class="sectionSearch">
-                <h2>Resultat de la recherche</h2>
-                <div class="searchResults"></div>
-            </section>
+            <section class="searchResults sectionGenre"></section>
             <section class="forms">
                 <article id="formInscri">
                     <span class="close">&times</span>
@@ -79,19 +74,16 @@
             </section>
 
             <section class="tableauAbonnement">
-                <h2>Nos abonnements</h2>
-                <div class="aboFlex">
+                <h2>Abonnements</h2>
+                <div>
                     <article>
                         <h3>Vint'age One<b>"only"</b></h3>
                         <span>prix = <b>20</b> Dinhars.</span>
-                        <p class="offre"> Disponibilité vint'age mov'is.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
+                         <p class="offre">vint'age en famille.
+                            double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                        <button class="openP fas fa-arrow-circle-down btn btn-secondary btn-sm"></button>
                     </article>
                     <article>
                         <h3>vint'age Houzz</h3>
@@ -99,36 +91,27 @@
                         <p class="offre">vint'age en famille.
                             double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
-                        
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                        <button class="openP fas fa-arrow-circle-down btn btn-secondary btn-sm"></button>
                     </article>
                     <a href="#remonter" id="pied"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
                     <article>
                         <h3>Vint'age N'Live</h3>
                         <span>Prix = <b>100</b> Francs/mois</span>
-                        <p class="offre">Vint'age dans votre poche.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p class="offre">vint'age en famille.
+                            double Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <button class="openP"><i class="fas fa-arrow-circle-down"></i></button>
-                       
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                        <button class="openP fas fa-arrow-circle-down btn btn-secondary btn-sm"></button>
                     </article>
                 </div>
             </section>
 
             <section class="sectionGenre">
                     <button type="button" class="backCat btn btn-secondary btn-sm">Retour vers categories</button>
-                    <h2>Nos categories</h2>
+                    <h2>Categories</h2>
                     <div class="sectionFlex"></div>
                     <div class="section_Category_id"></div>
-
             </section>
         </main>
 
@@ -165,14 +148,14 @@
         <!-- bootstrap js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/user.class.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/user.class.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

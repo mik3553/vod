@@ -5,7 +5,7 @@
  		$("#formInscri").slideDown();
  		$("h1").addClass("light");
  	})
- 	$("#connexion a").click(function(){
+ 	$(".connexion a").click(function(){
  		$("#formConnect").slideDown();
  		$("h1").addClass("light");
  	})
@@ -15,17 +15,16 @@
  	})
 
  	// pour faire apparaitre les offres en mobile
- 	$(".openP").click(function(){
- 		$(this).siblings("p").slideToggle();
-
- 		if ($(".offre") === "hidden") {
- 			$(".openP i").addClass("fas fa-arrow-circle-down");
- 		}
- 		else {
- 			$(".openP i").removeClass("fas fa-arrow-circle-up");
- 			$(".openP i").addClass("fas fa-arrow-circle-up");
- 		}
-
+ 	$(".openP").click(function(e){
+ 		e.preventDefault();
+ 		$(this).siblings("p").slideUp(function(){
+ 			$(this).siblings(".openP").removeClass("fas fa-arrow-circle-up");
+ 			$(this).siblings(".openP").addClass("fas fa-arrow-circle-down");
+ 		});
+ 		$(this).siblings("p:hidden").slideDown(function(){
+ 			$(this).siblings(".openP").removeClass("fas fa-arrow-circle-down");
+ 			$(this).siblings(".openP").addClass("fas fa-arrow-circle-up");
+ 		});
  	})
 
  	// event au click du submit de notre formulaire inscription
@@ -70,8 +69,6 @@
  		}
 
  	})
-
-
  	// on recuper notre localstorage pour afficher directement a la connexion l'email de notre user
  	let user = localStorage.getItem("user");
         user = JSON.parse(user);
@@ -91,7 +88,7 @@
 					 			if (data.auth == true) {
 					 				console.log("data_auth :",data.auth)
 					 				console.log("hello :"+data.user.username);
-					 				$("#connexion").text(`Bonjour ${data.user.username}`);
+					 				$(".connexion").text(`Bonjour ${data.user.username}`).css({color : "gold"});
 					 				$("#deconnexion").show();
 					 				$("#inscription").hide();
 					 				$("#monCompte").text("Mon compte");
@@ -114,7 +111,7 @@
 		console.log(data)
 		$.each( data, function(i,item) {
 
-			if (item.name == "kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires") {
+			if (item.name == "kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires"){
 
 				let article = $("<article>").attr("data-id", item._id);
 				let titre = $("<h3>").text(item.name);
@@ -132,7 +129,7 @@
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
 		$.each(data , function(i,item){
-			let article = $("<article class=\"media\">").attr("data-media", item.media);
+			let article = $("<article class=\"media\">").attr("data-media", item.media)
 			let titre = $("<h3>").text(item.name);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
 
@@ -146,7 +143,7 @@
 // ==================Afficher les films/series correspondants a la categorie clicker page d'accueil===============================
 	$(".sectionFlex").on("click","article", function(e){
 
-		$(".backCat").css("visibility", "visible");
+		$(".backCat").css({display: "block"});
 		let id = $(this).data("id");
 		let title = $(this).children("h3").html();
 
@@ -169,7 +166,6 @@
 			})
 		})
 	})
-
 //========Revenir a la categorie depuis la liste des films========================================
 	$(".backCat").click(()=>{
 
@@ -179,24 +175,22 @@
 	})	
 //======Evenement au click de notre article(film/serie etc...) on récupére le media de l'api et on l'insére dans notre URL================
 	$(document).on("click",".media", function() {
-		let media = $(this).data("media");
-		$(location).attr("href", "displayOne.html?id="+media);
+		let src = $(this).data("media");
+		$(location).attr("href", "displayOne.html?id=" + src);	
 	})
-
-//====================On récupére de notre url le lien avec le searchParams et on l'injecte dans notre src du Iframe==============================
-	const params = new URL(document.location).searchParams;
-    const lien = params.get("id");
+	const params = new URL(document.location).searchParams; //On récupére dans l'url le lien et on l'injecte dans l'Iframe
+	const lien = params.get("id");
 	$("iframe").attr("src", lien);
 
-//====================la fonction search pour retourner la recherche===========================================
-
-	$(".sectionSearch").hide();
+//====================searchBar======================================================================================================
+	$(".searchResults").hide();
 	$(".search").on("change",function(){
 
+		$(".searchResults").show();
 		$(".searchResults").empty();
-		$(".sectionSearch").show();
-		let inputVal = $(this).val();
-		let urlSearch ="https://brianboudrioux.fr/simplon/api/productsByName/" + inputVal;
+		let inputSearch = $(this).val();
+		let urlSearch ="https://brianboudrioux.fr/simplon/api/productsByName/" + inputSearch;
+		
 		$.get(urlSearch, function(data, status){
 			console.log(data);
 			$.each(data , function(i, item){
@@ -215,5 +209,5 @@
 
 
 
-	
+
 })
