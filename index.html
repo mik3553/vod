@@ -14,7 +14,6 @@
     <body>
         <span id="remonter"></span>
         <header>
-            <div id="welcome"></div>
             <div class="logoH1">
                 <img class="logo" src="images/logo.png" alt="logo">
                 <h1>Vint'age Mov'is</h1>
@@ -22,19 +21,23 @@
             <strong>Toutes vos videos Vintage en un seul site</strong>
             <ul class="flexLiFirst">
                 <li id="inscription"><a href="#">Inscription</a></li>
-                <li class="connexion"> <a href="#">Connexion</a> </li>
-                <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
+                <li class="connexion"><a href="#">Connexion</a></li>
+                <li id="deonnexion"><a href="#">Deconnexion</a></li>
             </ul> 
         </header>
         <nav class="mainNAv">
             <ul class="flexLi">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a id="monCompte" href="#" title="Inscris pour le découvrire">?</a></li>
+                <li id="monCompte" href="#" title="Inscris pour le découvrire">?</li>
                 <li><a href="displayAll.html">Gallerie</a></li>
                 <li><input class="search" type="text" placeholder="rechercher"></li>
                 <!-- <i class="fas fa-search"></i> -->
             </ul>
         </nav>
+        <div class="favoris">
+            <h2>Mes favoris</h2>
+            <ul></ul>
+        </div>
 
         <nav class="mainNAv">
             <ul class="flexLi">
@@ -45,6 +48,7 @@
         </nav>
         
         <main>
+            <div class="warningConnexion" role="alert"><span class="close">&times</span>Veuillez vous connecter pour visionner la vidéo !</div>
             <section class="searchResults sectionGenre"></section>
             <section class="forms">
                 <article id="formInscri">
@@ -117,11 +121,11 @@
 
             <section class="sectionGenre">
                     <h2>Categories</h2>
-                        <button type="button" class="backCat btn btn-secondary btn-sm">Retour vers categories</button>
-                    <div class="sectionFlex">
-                    </div>
+                    <button type="button" class="backCat btn btn-secondary btn-sm">Retour vers categories</button>
+                    <div class="sectionFlex"></div>
                     <button type="button" class="btnAddCat btn btn-secondary btn-sm">Ajouter catégorie</button>
                         <form id="formAddCat" action="#">
+                            <div class="warningAddContent">Veuillez remplir tous les champs!</div>
                             <div>
                                 <label for="name">name</label>
                                 <input type="text" id="nameAdd"></div>
@@ -179,6 +183,7 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
         <script type="text/javascript" src="js/utils.js"></script>
         <script type="text/javascript" src="js/user.class.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
