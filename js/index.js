@@ -79,27 +79,28 @@
  		// on requette l'url de l'api pour vérifier si les identifiants suivants existent
  		$.post(connexion , { email: $("#coEmail").val(),
  							 password:$("#coPassword").val()
- 							},  function(data, status){
- 								console.log(data);
-
-						 			console.log("réponse auth : ",data);
-						 			// l'api nous repond data.auth==false si identifiants email et password faux
-						 			if (data.auth == true) {
-					 				
-						 				console.log("data_auth :",data.auth)
-						 				$(".connexion").text(`Bonjour ${data.user.username}`).css({color : "gold"});
-						 				$("#monCompte").text("Mon compte");
-						 				$(".warningCheckUserAuth").hide();
-						 				$("#formConnect").slideUp();
-						 				//on instaure un sessionStorage sur notre utilisateur authentifier
-						 				sessionStorage.setItem("username", data.user.username);
-						 				sessionStorage.setItem("userId" , data.user._id);
-					 				}
-						 			else {
-						 				e.preventDefault();
-						 				$(".warningCheckUserAuth").show().addClass("alert alert-danger");
-						 			}
- 								})
+ 							}, function(data, status){
+					 			console.log(status);
+					 			console.log("réponse auth : ",data);
+					 			// l'api nous repond data.auth==false si identifiants email et password faux
+					 			if (data.auth == true) {
+					 				console.log("data_auth :",data.auth)
+					 				console.log("hello :"+data.user.username);
+					 				$(".connexion").text(`Bonjour ${data.user.username}`).css({color : "gold"});
+					 				$("#deconnexion").show();
+					 				$("#inscription").hide();
+					 				$("#monCompte").text("Mon compte");
+					 				$(".warningCheckUserAuth").hide();
+					 				$("#formConnect").slideUp();
+					 				let userFavori = data.user._id;
+					 				console.log(userFavori);
+					 				sessionStorage.setItem("userId", userFavori);
+					 			}
+					 			else {
+					 				e.preventDefault();
+					 				$(".warningCheckUserAuth").show().addClass("alert alert-danger");
+					 			}
+ 							})
  	})
 //==============on recupére le sessiostorage(username) de lutilisateur authentifier===========================================	
  	let sessionStart = sessionStorage.getItem("username");
@@ -123,9 +124,9 @@
 	const categorys = "https://brianboudrioux.fr/simplon/api/categories";
 	$.get(categorys)
 	// escma6
-	.done((data, status)=>{
-	
-		$.each(data, (i,item)=> {
+	.done( function(data, status){
+		console.log(data)
+		$.each( data, function(i,item) {
 
 			if (item.name == "kids" || item.name == "Vintage Kids" || item.name == "comedy" || item.name =="vintage" || item.name == "Vintage documentaires" || item.name =="Vintage suspense"){
 
@@ -137,6 +138,8 @@
 				img.appendTo(article);
 			}
 		});      
+	})
+//==================Afficher nos films/series page displayOne========================================================================================
 	});
 //=================Ajouter une catégorie====================================================================================
 	//afficher notre formulaire d'ajout categorie
@@ -164,26 +167,45 @@
 //==================Afficher nos films/series page displayAll========================================================================================
 	const filmSeries = "https://brianboudrioux.fr/simplon/api/products";
 	$.get(filmSeries, function(data, status){
+		console.log(data);
+		console.log(status)
 		$.each(data , function(i,item){
-
-			let fullItem = $("<div>").appendTo(".sectionFlexFilm");
-
-
 			let article = $("<article class=\"media\">").attr("data-media", item.media);
 			let titre = $("<h3>").text(item.name);
 			let img = $("<img class='imgCat'>").attr("src", item.picture);
-
-			article.appendTo(fullItem);
+			let button = $("<button class = \"ajoutfavoris\">").text("Ajouter aux favorits").attr("data-id", item._id);
+			let div = $("<div>").appendTo(".sectionFlexFilm");
+			button.appendTo(div);
+			article.appendTo(".sectionFlexFilm");
+			div.appendTo(div);
 			titre.appendTo(article);
 			img.appendTo(article);
 
-			let div = $("<div></div>").css({textAlign : "center"});
-			let button = $("<button class='addFav'>Ajouter aux favories</button>").attr("data-id",item._id).addClass("btn btn-secondary btn-sm");
-			div.appendTo(fullItem);
-			button.appendTo(div);
-			$(".idInfo").text(`resultat de la recherche: ${data.length}`);
+
+
 		});
 	});
+
+	//Au clic du film de notre page displayAll, on redirige vers la page displayOne et on fait apparaitre le media correspondant.
+
+	const touslesFilms = "https://brianboudrioux.fr/simplon/api/products";
+
+	$(".sectionFlexFilm").on("click","article", function() {
+		document.location.href="displayOne.html";
+
+		/*let idFilm = article.id;
+		let titreFilm = item.description;
+		let film = article;*/
+		
+
+		/*$(this).article().show();*/
+
+			$(".media").show( $(this).media); 
+
+	})
+
+	//Afficher les films/series correspondants a la categorie clicker page d'accueil
+
 //==================Ajouter un film=========================================================================================
 	$(".btnAddProduct").click(()=>{
 		$("#formAddProduct").toggle();
@@ -209,7 +231,6 @@
 	});
 //==================Afficher les films/series correspondants a la categorie clicker sur la page d'accueil===============================
 	$(".sectionFlex").on("click","article", function(e){
-
 		$(".btnAddCat").hide();
 		$(".backCat").css({display: "block"});
 		let id = $(this).data("id");
@@ -264,6 +285,7 @@
 	const params = new URL(document.location).searchParams;
 	const lien = params.get("id");
 	$("iframe").attr("src", lien);
+
 //====================searchBar======================================================================================================
 	$(".searchResults").hide();
 	$(".search").on("change",function(){
@@ -280,19 +302,36 @@
 				let article = $("<article class=\"media\">").attr("data-media", item.media);
 				let titre = $("<h3>").text(item.name);
 				let img = $("<img>").attr("src", item.picture);
-
+				
 				article.appendTo(".searchResults");
 				titre.appendTo(article);
 				img.appendTo(article);
 
-				let div = $("<div>").css({textAlign : "center"});
-				let button = $("<button class='addFav'>Ajouter aux favories</button>").attr("data-id",item._id).addClass("btn btn-secondary btn-sm");
-				div.appendTo(".searchResults");
-				button.appendTo(div);
+			})
+		})
+	})
 
-			});
+	//====================== faire des favoris qui envoiens les données d'utilisateurs
+
+
+
+//Faut user est connecté ... et tu recuperes l'ajoutfavoris par une classe existante
+
+$(".sectionFlexFilm").on("click", ".ajoutfavoris", function(e) { 
+
+		let favoriFilm = $(this).data("id");
+
+		 let userId = sessionStorage.getItem("userId");
+		const favori = "https://brianboudrioux.fr/simplon/api/products/favorites/"+userId;
+
+		$.post(favori, {product: favoriFilm}, function(data, status) {
+
+
+			console.log(data);
+			console.log(status);
 		});
-	});
+});
+
 //====================ajout favoris======================================================================================================
 	$("section").on("click", ".addFav", function(){
 		let addFav = $(this).data("id");
@@ -332,4 +371,4 @@
 		}
 	})
 
-})
+// Au clic de boutton AJOUTFAVORI, 
