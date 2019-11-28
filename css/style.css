@@ -1,8 +1,15 @@
-
 #welcome {
- 
   color: gold;
   text-align: right;
+}
+body {
+	font-family: 'Old Standard TT', serif;
+  background-image: url("../images/fond_ecran.jpeg");
+}
+
+
+.fas:hover {
+  color: gold;
 }
 
 .forms {
@@ -11,33 +18,14 @@
   border: none;
 }
 
-.sectionSearch {
-  background-color: black;
-}
-
 .searchResults {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: black;
-  border-radius: 1rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: sticky;
+  top: 3rem;
 }
 
-.searchResults article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: grey;
-  padding: 0.5rem;
-  margin: 0.5rem 1rem;
-  border-radius: 1rem;
-}
-
-.searchResults img {
-  height: 13rem;
-  width: 15rem;
-}
 
 input[type=text], [type=email], [type=password] {
   width: 100%;
@@ -65,8 +53,9 @@ input[type=submit]:hover {
 }
 input[placeholder=rechercher]{
   display: block;
-  width: 30%;
-  margin: 0 auto;
+  margin: 0.5em 0;
+  height: 0.5rem;
+  width: 7rem;
 }
 
 #formInscri {
@@ -76,10 +65,10 @@ input[placeholder=rechercher]{
 	border-radius: 1rem;
 	background-color: #000000;
 	padding: 1rem;
-	width: 20rem;
-	margin-left: -10rem;
+	width: 16rem;
+	margin-left: -8rem;
 	position: fixed;
-	top: 11rem;
+	top: 8rem;
 	left: 50%;
 }
 
@@ -90,10 +79,10 @@ input[placeholder=rechercher]{
 	border-radius: 1rem;
 	background-color: #000000;
 	padding: 1rem;
-	width: 20rem;
-	margin-left: -10rem;
+	width: 16rem;
+	margin-left: -8rem;
 	position: fixed;
-	top: 11rem;
+	top: 8rem;
 	left: 50%;
 }
 
@@ -101,7 +90,7 @@ input[placeholder=rechercher]{
   text-shadow: -2px -2px 6px white;
 }
 
-#connexion {
+.connexion {
   text-shadow: 2px -2px 6px white;
 }
 
@@ -141,26 +130,16 @@ input[placeholder=rechercher]{
 h3 {
   color: white;
   text-align: center;
-  margin-top: 1rem;
-}
-
-body {
-	
-	font-family: 'Old Standard TT', serif;
+  margin: 0.5rem 0;
 }
 
 main {
-	margin: 0.5rem 0.5rem;
+	margin: 0.5rem 2rem;
 }
 
 a {
 	text-decoration: none;
 	color: whitesmoke;
-
-}
-a:hover {
-	color: gold;
-  text-decoration-line: none;
 }
 
 label {
@@ -173,7 +152,6 @@ p {
 
 li {
 	list-style: none;
-	color: white;
 	padding: 0;
 }
 
@@ -183,7 +161,7 @@ ul{
 }
 
 header {
-	padding: 1rem;
+	padding: 0.5rem;
 	background-color: black;
   display:flex;
   flex-direction: column;
@@ -192,12 +170,12 @@ header {
 .logo {
 	display: block;
 	margin: 0 auto;
-	width: 5rem;
+	width: 4rem;
 	text-align: center;
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 1.8em;
 	color: #B6C6D4;
 	text-shadow: 1px -3px 15px grey;
 	text-align: center;
@@ -214,9 +192,16 @@ strong {
 }
 
 .mainNAv {
-	background-color: rgb(77, 77, 77);
+	background-color: whitesmoke;
 	padding: 1rem auto;
-	border-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 4px 10px black;
 }
 
 .flexLiFirst{
@@ -228,17 +213,28 @@ strong {
 .flexLi {
 	display: flex;
 	justify-content: space-around;
-	background-color: rgb(77, 77, 77);
-	padding: 1rem 1rem;
+  align-items: center;
 	border-bottom-right-radius: 1rem;
 	border-bottom-left-radius: 1rem;
 }
 
- .tableauAbonnement {
+.flexLi a {
+  color: black;
+}
 
-  border: 5px;
-  border-color: black;
-  margin-top:1px;
+a:hover {
+	color: gold;
+  font-weight: 900;
+  text-decoration-line: none;
+}
+
+section {
+	margin: 1rem auto;
+	padding: 1rem 1rem;
+	border: 1px solid black;
+	border-radius: 1rem;
+}
+.tableauAbonnement {
   background-color: grey;
 }
 
@@ -246,82 +242,114 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-	border: 1px solid black;
 	background-color: black;
-	margin: 0 auto 1rem auto;
-	width: 90%;
+	margin: 0 auto 0.5rem auto;
+	width: 16rem;
 	border: 1px solid white;
 	border-radius: 1rem;
+}
+.tableauAbonnement article h3 {
+  font-size: 1.2em;
+  margin: 0.5rem auto 0 auto;
 }
 
 .tableauAbonnement article p {
   display: none;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color:  rgb(77, 77, 77);
 }
 
+.tableauAbonnement article span {
+  color: gold;
+  font-weight: 50;
+  font-size:0.8em;
+}
+
+
 .openP {
-  width: 100%;
-  background-color: rgb(77, 77, 77);
+  width: 98%;
   border: 1px solid white;
   border-radius: 1rem;
+  background: #bababa;
+background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
+background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
 
 }
-
-
 
 h2 { 
-	color: whitesmoke;
+  padding: 0.5em;
+  font-size: 1.2em;
+	color: black;
 	text-align: center;
-}
+  border-radius: 1rem;
+  width: 12rem;
+  margin: 0 auto 0.5rem auto;
+  background: #bababa;
+background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
+background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
 
-section {
-	margin: 0.5rem auto;
-	padding: 1rem 1rem;
-	border: 1px solid black;
-	border-radius: 1rem;
+
 }
 
 .backCat {
-  display: block;
+  display: none;
   margin: 0 auto 1rem auto;
-  visibility: hidden;
 }
 
 .sectionGenre {
 	background-color: black;
 }
+.btnAddCat, .btnAddProduct {
+  display: block;
+  margin:0.5rem auto;
+}
 
+#formAddCat, #formAddProduct {
+  display: none;
+}
+
+
+/*tout nos article sont a l'interieur d'une class sectionGenre*/
 .sectionGenre article{
   display: flex;
   flex-direction: column;
   align-items: center;
 	background-color: grey;
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
   margin: 0.5rem auto;
   border-radius: 1rem;
-/*	width: 90%;
-	margin: 0 auto 1rem auto;
-	padding-bottom: 1.5rem;
-	border: 1px solid white;
-	border-radius: 1rem;*/
+	width: 16rem;
+  transition-property: transform;
+  transition-duration: 0.8s;
 }
 
-.sectionGenre img {
-  height: 13rem;
-  width: 15rem;
- 
+.sectionGenre article:hover{
+   transform: scale(1.06) ;
+   margin: 1rem auto;
+   border: 3px gold solid;
 }
 
 
-.sectionGenre h3 {
-	color: black;
+.sectionGenre article img {
+  height: 10rem;
+  width: 13rem;
+  border-top: 4px solid black; 
+  border-bottom:4px solid black;
 }
 
-iframe {
-  width: 100%;
-  height: 35rem;
-  text-align: center;
+.sectionGenre article h3 {
+  margin-top: 1rem;
+  font-size: 1.2em;
+  color: black;
+  background-color: white;
+  width:100%;
+  font-weight: 900;
+  border-top: 2px solid black; 
+  border-bottom:2px solid black;
 }
 
 
@@ -335,12 +363,22 @@ footer {
 footer div {
 	text-align: center;
 }
+footer h4 {
+  color: whitesmoke;
+  font-weight: 600;
+}
 
 header a, footer a, strong {
 	color: whitesmoke;
 }
 
+iframe {
+  width: 100%;
+  height: 12rem;
+}
+
 @media screen and (min-width: 1024px) {
+
 
   .searchResults {
 
@@ -349,17 +387,15 @@ header a, footer a, strong {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: black;
-    border: 1px solid black;
     border-radius: 1rem;
   }
   
   .searchResults article {
-    width: 30%;
+    width: 15rem;
   }
 
-
   main {
-    margin: 1rem 7rem;
+    margin: 1rem 20rem;
   }
 
   header{
@@ -376,11 +412,12 @@ header a, footer a, strong {
   }
   h1{
     margin: 0;
+    font-size: 1.8em;
   }
   strong {
     display: block;
     text-align:center;
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
 
@@ -403,7 +440,7 @@ header a, footer a, strong {
   }
 
   .logo {
-    width: 10rem;
+    ma-width: 8rem;
   }
 
   .aboFlex {
@@ -412,16 +449,22 @@ header a, footer a, strong {
   }
 
   .openP {
-    display:none;
+    display:none !important;
   }
 
   .offre {
     display: block;
     font-size: 1.5em;
   }
+
+  .tableauAbonnement div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
   .tableauAbonnement article {
-    margin: 0;
-    width: 32%;
+    width: 30%;
   }
   .tableauAbonnement article p {
     display: block;
@@ -435,7 +478,7 @@ header a, footer a, strong {
   }
 
   .sectionFlex article{
-    width: 30%;
+    width: 15rem;
   }
 
   .sectionFlexFilm{
@@ -446,7 +489,7 @@ header a, footer a, strong {
   }
 
   .sectionFlexFilm article{
-    width: 30%;
+    width: 15rem;
   }
 
   .section_Category_id {
@@ -457,7 +500,7 @@ header a, footer a, strong {
   }
 
   .section_Category_id article {
-    width: 30%;
+    width: 15rem;
   }
 
 
@@ -479,8 +522,10 @@ header a, footer a, strong {
     margin-left: -18rem;
   }
 
-
-
+  iframe {
+  width: 100%;
+  height: 35rem;
+}
 
 
 }
