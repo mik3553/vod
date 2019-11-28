@@ -15,7 +15,6 @@
         <span id="remonter"></span>
 
         <header>
-            <div id="welcome"></div>
             <div class="logoH1">
                 <img class="logo" src="images/logo.png" alt="logo">
                 <h1>Vint'age Mov'is</h1>
@@ -23,8 +22,8 @@
             <strong>Toutes vos videos Vintage en un seul site</strong>
             <ul class="flexLiFirst">
                 <li id="inscription"><a href="#">Inscription</a></li>
-                <li class="connexion"> <a href="#">Connexion</a> </li>
-                <li id="deconnexion"> <a href="#">Deconnexion</a> </li>
+                <li class="connexion"><a href="#">Connexion</a></li>
+                <li id="deonnexion"><a href="#">Deconnexion</a></li>
             </ul> 
         </header>
         <nav class="mainNAv">
@@ -35,8 +34,13 @@
                 <li><input class="search" type="text" placeholder="rechercher"></li>
             </ul>
         </nav>
+        <div class="favoris">
+            <h2>Mes favoris</h2>
+            <ul></ul>
+        </div>
 
         <main>
+           <div class="warningConnexion" role="alert"><span class="close">&times</span>Veuillez vous connecter pour visionner la vidéo !</div>
             <section class="searchResults sectionGenre"></section>
             <section class="forms">
                 <article id="formInscri">
