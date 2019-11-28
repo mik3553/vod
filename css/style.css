@@ -7,6 +7,31 @@ body {
   background-image: url("../images/fond_ecran.jpeg");
 }
 
+.idInfo {
+  display: block;
+  color: red;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.warningConnexion {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  height: 5rem;
+  width: 20rem;
+  margin-left: -10rem; 
+  text-align: center;
+  z-index: 10000;
+  border-radius: 1rem;
+  border:3px solid red;
+}
+.warningAddContent {
+  display: none;
+  margin: auto;
+}
+
 
 .fas:hover {
   color: gold;
@@ -94,7 +119,7 @@ input[placeholder=rechercher]{
   text-shadow: 2px -2px 6px white;
 }
 
-#deconnexion {
+#deonnexion {
   text-shadow: 2px -2px 6px white;
   display: none;
 }
@@ -222,7 +247,7 @@ strong {
   color: black;
 }
 
-a:hover {
+a:hover, li:hover {
 	color: gold;
   font-weight: 900;
   text-decoration-line: none;
@@ -271,10 +296,10 @@ section {
   border: 1px solid white;
   border-radius: 1rem;
   background: #bababa;
-background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
-background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
-background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
+  background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
+  background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+  background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
 
 }
 
@@ -287,10 +312,10 @@ h2 {
   width: 12rem;
   margin: 0 auto 0.5rem auto;
   background: #bababa;
-background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
-background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
-background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
+  background: -moz-linear-gradient(-45deg,  #bababa 35%, #191919 68%, #e5e5e5 100%);
+  background: -webkit-linear-gradient(-45deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+  background: linear-gradient(135deg,  #bababa 35%,#191919 68%,#e5e5e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#e5e5e5',GradientType=1 );
 
 
 }
@@ -320,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', end
   align-items: center;
 	background-color: grey;
   padding-bottom: 0.5rem;
-  margin: 0.5rem auto;
+  margin: 1rem auto 0 auto;
   border-radius: 1rem;
 	width: 16rem;
   transition-property: transform;
@@ -328,7 +353,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', end
 }
 
 .sectionGenre article:hover{
-   transform: scale(1.06) ;
+   transform: scale(1.08);
    margin: 1rem auto;
    border: 3px gold solid;
 }
@@ -351,6 +376,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', end
   border-top: 2px solid black; 
   border-bottom:2px solid black;
 }
+
+
+.favoris {
+  display: none;
+  background-color: black;
+  width: 100%;
+  position: sticky;
+  top: 2.5rem;
+  z-index: 2;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius:1rem;
+}
+
+.favoris h2 {
+  color: white;
+  font-size: 1em;
+  background-image: none;
+  text-align: center;
+  width: 100%;
+}
+.favoris h3 {
+  width: 90%;
+  color: white;
+  font-size: 1em;
+  background-color: none;
+  text-align: left;
+  margin-left: 1rem;
+}
+.favoris h3:hover {
+  width: 100%;
+  color: black;
+  font-size: 1em;
+  background-color: white;
+  margin-left: 1rem;
+}
+
 
 
 footer {
@@ -379,6 +440,16 @@ iframe {
 
 @media screen and (min-width: 1024px) {
 
+ /* .favoris {
+    display: none;
+    background-color: black;
+    width: 14rem;
+    position: sticky;
+    top: 2.5rem;
+    right: : 0;
+    margin-right: 0; 
+    z-index: 2;
+  }*/
 
   .searchResults {
 
@@ -395,7 +466,7 @@ iframe {
   }
 
   main {
-    margin: 1rem 20rem;
+    margin: 1rem 10rem;
   }
 
   header{
@@ -407,7 +478,6 @@ iframe {
   .logoH1 {
     /*margin: 0 0 0 1rem;*/
     width: 20%;
-    text-align: left;
 
   }
   h1{
